@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://nlp-tlp.org/ontology/pump/ont/grundfos_example/"
-     xml:base="https://nlp-tlp.org/ontology/pump/ont/grundfos_example/"
+<rdf:RDF xmlns="https://nlp-tlp.org/ontology/pump/ont/pump_model_example/"
+     xml:base="https://nlp-tlp.org/ontology/pump/ont/pump_model_example/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:pav="http://purl.org/pav/"
@@ -13,8 +13,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:example="https://nlp-tlp.org/ontology/pump/example/"
      xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
-    <owl:Ontology rdf:about="https://nlp-tlp.org/ontology/pump/ont/grundfos_example">
-        <owl:versionIRI rdf:resource="https://nlp-tlp.org/ontology/pump/ont/grundfos_example"/>
+    <owl:Ontology rdf:about="https://nlp-tlp.org/ontology/pump/ont/pump_model_example">
+        <owl:versionIRI rdf:resource="https://nlp-tlp.org/ontology/pump/ont/pump_model_example"/>
         <owl:imports rdf:resource="http://rds.posccaesar.org/ontology/lis14/ont/core/4.2"/>
         <owl:imports rdf:resource="https://nlp-tlp.org/ontology/pump/ont/1.0.0"/>
     </owl:Ontology>
