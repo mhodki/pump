@@ -174,10 +174,10 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/ont/HorizonatalMixedFlowPump -->
+    <!-- https://nlp-tlp.org/ontology/pump/ont/HorizontalMixedFlowPump -->
 
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/ont/HorizonatalMixedFlowPump">
-        <rdfs:label xml:lang="en">Horizonatal mixed flow pump</rdfs:label>
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/ont/HorizontalMixedFlowPump">
+        <rdfs:label xml:lang="en">Horizontal mixed flow pump</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/ont/MixedFlowPump"/>
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpType"/>
     </owl:Class>
