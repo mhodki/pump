@@ -2,17 +2,17 @@
 <rdf:RDF xmlns="https://nlp-tlp.org/ontology/pump/example#"
      xml:base="https://nlp-tlp.org/ontology/pump/example"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ont="https://www.nlp-tlp.org/ontology/pump/ont/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:pav="http://purl.org/pav/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:rdl="http://rds.posccaesar.org/ontology/lis14/rdl/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:pump="https://nlp-tlp.org/ontology/pump/rdl/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:example="https://nlp-tlp.org/ontology/pump/example/"
-     xmlns:pump="https://nlp-tlp.org/ontology/pump/rdl/"
      xmlns:pump_ex="https://nlp-tlp.org/ontology/pump/example/"
      xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://nlp-tlp.org/ontology/pump/example">
@@ -26,7 +26,7 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Object Properties
+    // Annotation properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
@@ -34,19 +34,18 @@
     
 
 
-    
+    <!-- https://nlp-tlp.org/ontology/pump/example/sellsProductModel -->
+
+    <owl:AnnotationProperty rdf:about="https://nlp-tlp.org/ontology/pump/example/sellsProductModel"/>
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/sellsProductModel -->
 
+    <owl:AnnotationProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/sellsProductModel"/>
     
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -55,6 +54,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/example/AH_model_type -->
+
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/AH_model_type">
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpManufacturerPumpClass"/>
+    </owl:NamedIndividual>
     
 
 
@@ -77,52 +84,44 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/example/PumpP101 -->
+    <!-- https://nlp-tlp.org/ontology/pump/example/PumpG101 -->
 
-    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpP101">
-        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithEndSuction"/>
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpG101">
         <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump"/>
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithEndSuction"/>
         <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage"/>
-        <rdl:hasAssembledPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpP101_impeller"/>
-        <rdl:hasAssembledPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpP101_volute"/>
+        <rdl:hasAssembledPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpG101_impeller"/>
+        <rdl:hasAssembledPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpG101_volute"/>
         <pump:hasManufacturer rdf:resource="https://nlp-tlp.org/ontology/pump/example/Grundfos"/>
         <pump:isModelClass rdf:resource="https://nlp-tlp.org/ontology/pump/example/NB_model_class"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/example/PumpP101_impeller -->
+    <!-- https://nlp-tlp.org/ontology/pump/example/PumpG101_impeller -->
 
-    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpP101_impeller">
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpG101_impeller">
         <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/example/PumpP101_volute -->
+    <!-- https://nlp-tlp.org/ontology/pump/example/PumpG101_volute -->
 
-    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpP101_volute">
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpG101_volute">
         <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpVolute"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/example/AH_model_type -->
+    <!-- https://nlp-tlp.org/ontology/pump/example/PumpW101 -->
 
-    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/AH_model_type">
-        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpManufacturerPumpClass"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/example/PumpG101 -->
-
-    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpG101">
-        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithEndSuction"/>
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpW101">
         <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump"/>
         <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitRadial"/>
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithEndSuction"/>
         <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage"/>
-        <pump:hasManufacturer rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpG101"/>
+        <pump:hasManufacturer rdf:resource="https://nlp-tlp.org/ontology/pump/example/Warman"/>
         <pump:isModelClass rdf:resource="https://nlp-tlp.org/ontology/pump/example/AH_model_type"/>
     </owl:NamedIndividual>
     
@@ -130,13 +129,17 @@
 
     <!-- https://nlp-tlp.org/ontology/pump/example/SP_model_class -->
 
-    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/SP_model_class"/>
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/SP_model_class">
+        <pump:hasManufacturer rdf:resource="https://nlp-tlp.org/ontology/pump/example/Grundfos"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- https://nlp-tlp.org/ontology/pump/example/UP_model_class -->
 
-    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/UP_model_class"/>
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/UP_model_class">
+        <pump:hasManufacturer rdf:resource="https://nlp-tlp.org/ontology/pump/example/Grundfos"/>
+    </owl:NamedIndividual>
     
 
 
