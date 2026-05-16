@@ -39,11 +39,11 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/example/hasModelType -->
+    <!-- https://nlp-tlp.org/ontology/pump/example/isModelClass -->
 
-    <owl:ObjectProperty rdf:about="https://nlp-tlp.org/ontology/pump/example/hasModelType">
+    <owl:ObjectProperty rdf:about="https://nlp-tlp.org/ontology/pump/example/isModelClass">
         <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/representedIn"/>
-        <rdfs:label xml:lang="en">hasModelType</rdfs:label>
+        <rdfs:label xml:lang="en">isModelClass</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -138,11 +138,11 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/example/PumpManufacturerPumpType -->
+    <!-- https://nlp-tlp.org/ontology/pump/example/PumpManufacturerPumpClass -->
 
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpManufacturerPumpType">
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpManufacturerPumpClass">
         <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"/>
-        <rdfs:label xml:lang="en">Pump manufacturer pump type</rdfs:label>
+        <rdfs:label xml:lang="en">Pump manufacturer pump class</rdfs:label>
     </owl:Class>
     
 
@@ -150,8 +150,8 @@
     <!-- https://nlp-tlp.org/ontology/pump/example/PumpVolute -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpVolute">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpPart"/>
-        <rdfs:label xml:lang="en">Pump volute</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasing"/>
+        <rdfs:label xml:lang="en">Pump volute casing</rdfs:label>
     </owl:Class>
     
 
@@ -371,6 +371,15 @@
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpType"/>
         <rdfs:label xml:lang="en">Propeller pump</rdfs:label>
         <skos:definition xml:lang="en">type of axial-flow rotodynamic pump that uses a propeller-shaped impeller to move liquid mainly parallel to the pump shaft</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/ont/PumpAnnularCasing -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/ont/PumpAnnularCasing">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasing"/>
+        <rdfs:label xml:lang="en">Pump annular casing</rdfs:label>
     </owl:Class>
     
 
@@ -622,6 +631,15 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/ont/PumpVortexCasing -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/ont/PumpVortexCasing">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasing"/>
+        <rdfs:label xml:lang="en">Pump vortex casing</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/ont/PumpWearRing -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/ont/PumpWearRing">
@@ -721,6 +739,24 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/ont/RotordynamicPump">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedMotion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://nlp-tlp.org/ontology/pump/ont/hasCasing"/>
+                <owl:someValuesFrom rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://nlp-tlp.org/ontology/pump/ont/hasImpeller"/>
+                <owl:someValuesFrom rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://nlp-tlp.org/ontology/pump/ont/hasShaft"/>
+                <owl:someValuesFrom rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpShaft"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute rotodynamic pump definitions and terminology.</rdfs:comment>
         <rdfs:label xml:lang="en">Rotordynamic pump</rdfs:label>
         <skos:definition xml:lang="en">type of pump in which a rotating impeller or rotor continuously imparts kinetic energy to liquid and converts that energy into pressure or head</skos:definition>
@@ -772,6 +808,15 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/AxialFlowImpeller -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/AxialFlowImpeller">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign"/>
+        <rdfs:label xml:lang="en">Axial flow impeller</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump">
@@ -779,6 +824,64 @@
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute centrifugal pump terminology, with API 610 / ISO 13709 applying centrifugal pump configuration categories.</rdfs:comment>
         <rdfs:label xml:lang="en">Centrifugal pump</rdfs:label>
         <skos:definition xml:lang="en">type of rotodynamic pump in which liquid enters the impeller near the axis of rotation and is discharged primarily by centrifugal action</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/ClosedImpeller -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ClosedImpeller">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign"/>
+        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/OpenImpeller"/>
+        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/SemiOpenImpeller"/>
+        <rdfs:label xml:lang="en">Closed impeller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/DoubleSuctionImpeller -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/DoubleSuctionImpeller">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign"/>
+        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/SingleSuctionImpeller"/>
+        <rdfs:label xml:lang="en">Double suction impeller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/InducedVortexImpeller -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/InducedVortexImpeller">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign"/>
+        <rdfs:label xml:lang="en">Induced vortex impeller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/MixedFlowImpeller -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/MixedFlowImpeller">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign"/>
+        <rdfs:label xml:lang="en">Mixed flow impeller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/OpenImpeller -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/OpenImpeller">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign"/>
+        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/SemiOpenImpeller"/>
+        <rdfs:label xml:lang="en">Open impeller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PlainVaneImpeller -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PlainVaneImpeller">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign"/>
+        <rdfs:label xml:lang="en">Plain vane impeller</rdfs:label>
     </owl:Class>
     
 
@@ -845,8 +948,8 @@
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpDiffuser -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpDiffuser">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpPart"/>
-        <rdfs:label xml:lang="en">Pump diffuser</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasing"/>
+        <rdfs:label xml:lang="en">Pump diffuser casing</rdfs:label>
     </owl:Class>
     
 
@@ -883,6 +986,15 @@
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpPart"/>
         <rdfs:label xml:lang="en">Pump impeller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/Pump"/>
+        <rdfs:label xml:lang="en">Pump impeller design</rdfs:label>
     </owl:Class>
     
 
@@ -941,15 +1053,6 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithAxialFlowImpeller -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithAxialFlowImpeller">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedImpellerFeature"/>
-        <rdfs:label xml:lang="en">Pump with axial flow impeller</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitAxial -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitAxial">
@@ -969,96 +1072,18 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithClosedImpeller -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithClosedImpeller">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedImpellerFeature"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithOpenImpeller"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSemiOpenImpeller"/>
-        <rdfs:label xml:lang="en">Pump with closed impeller</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithDoubleSuctionImpeller -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDoubleSuctionImpeller">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedImpellerFeature"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleSuctionImpeller"/>
-        <rdfs:label xml:lang="en">Pump with double suction impeller</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithInducedVortexImpeller -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithInducedVortexImpeller">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedImpellerFeature"/>
-        <rdfs:label xml:lang="en">Pump with induced vortex impeller</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithMixedFlowImpeller -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithMixedFlowImpeller">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedImpellerFeature"/>
-        <rdfs:label xml:lang="en">Pump with mixed flow impeller</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithMultiStage -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithMultiStage">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedStages"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://nlp-tlp.org/ontology/pump/ont/hasImpeller"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Pump with multi stage</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithOpenImpeller -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithOpenImpeller">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedImpellerFeature"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSemiOpenImpeller"/>
-        <rdfs:label xml:lang="en">Pump with open impeller</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithPlainVaneImpeller -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithPlainVaneImpeller">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedImpellerFeature"/>
-        <rdfs:label xml:lang="en">Pump with plain vane impeller</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSIngleStage -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSIngleStage">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedStages"/>
-        <rdfs:label xml:lang="en">Pump with s ingle stage</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithScrewVaneImpeller -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithScrewVaneImpeller">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedImpellerFeature"/>
-        <rdfs:label xml:lang="en">Pump with screw vane impeller</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSemiOpenImpeller -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSemiOpenImpeller">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedImpellerFeature"/>
-        <rdfs:label xml:lang="en">Pump with semi open impeller</rdfs:label>
     </owl:Class>
     
 
@@ -1082,11 +1107,18 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleSuctionImpeller -->
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage -->
 
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleSuctionImpeller">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedImpellerFeature"/>
-        <rdfs:label xml:lang="en">Pump with single suction impeller</rdfs:label>
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedStages"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://nlp-tlp.org/ontology/pump/ont/hasImpeller"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Pump with single stage</rdfs:label>
     </owl:Class>
     
 
@@ -1096,15 +1128,6 @@
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/Pump"/>
         <rdfs:label xml:lang="en">Pump with specified features</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedImpellerFeature -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedImpellerFeature">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/Pump"/>
-        <rdfs:label xml:lang="en">Pump with specified impeller feature</rdfs:label>
     </owl:Class>
     
 
@@ -1146,6 +1169,33 @@
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute rotary pump terminology, with supporting ISO 15926-4 reference data item ROTARY_PUMP.</rdfs:comment>
         <rdfs:label xml:lang="en">Rotary pd pump</rdfs:label>
         <skos:definition xml:lang="en">type of positive displacement pump that moves liquid by the rotary motion of gears, screws, lobes, vanes, or similar elements that form moving enclosed volumes</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/ScrewVaneImpeller -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ScrewVaneImpeller">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign"/>
+        <rdfs:label xml:lang="en">Screw vane impeller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/SemiOpenImpeller -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/SemiOpenImpeller">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign"/>
+        <rdfs:label xml:lang="en">Semi open impeller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/SingleSuctionImpeller -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/SingleSuctionImpeller">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign"/>
+        <rdfs:label xml:lang="en">Single suction impeller</rdfs:label>
     </owl:Class>
     
 
