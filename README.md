@@ -6,8 +6,6 @@ This repository contains an **OWL 2 Web Ontology Language** (RDF/XML serializati
 
 Ontologies in this repository enable semantic representation of pump systems and equipment configurations.
 
-![Alt text](ExperimentPumpDiagrampng.png)
-
 ## Primary Files
 
 ### pump.rdf
