@@ -30,9 +30,6 @@ The main ontology file containing:
   - `ISO15926_desc`: ISO 15926-4 text definition
   - `HI_ID`: Hydraulic Institute tool pump type code (when available)
 
-### pump_2.rdf
-Updated variant of pump.rdf with corrected namespace declarations.
-
 ### Pump_model_examples.rdf
 Demonstrates usage of pump ontology classes through pump equipment individuals/instances.
 
