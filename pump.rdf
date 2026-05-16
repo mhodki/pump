@@ -36,16 +36,24 @@
     </owl:AnnotationProperty>
 
     <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_ID">
-        <rdfs:label xml:lang="en">ISO 15926 ID</rdfs:label>
+        <rdfs:label xml:lang="en">ISO 15926-4 ID</rdfs:label>
         <rdfs:comment xml:lang="en">ISO 15926-4 unique number for this class</rdfs:comment>
     </owl:AnnotationProperty>
 
     <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_URI">
-        <rdfs:label xml:lang="en">ISO 15926 URI</rdfs:label>
+        <rdfs:label xml:lang="en">ISO 15926-4 URI</rdfs:label>
         <rdfs:comment xml:lang="en">15926-4 URI for this class</rdfs:comment>
     </owl:AnnotationProperty>
 
+    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_desc">
+        <rdfs:label xml:lang="en">ISO 15926-4 description</rdfs:label>
+        <rdfs:comment xml:lang="en">15926-4 description for this class</rdfs:comment>
+    </owl:AnnotationProperty>
 
+    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_name">
+        <rdfs:label xml:lang="en">ISO 15926-4 name</rdfs:label>
+        <rdfs:comment xml:lang="en">15926-4 name for this class</rdfs:comment>
+    </owl:AnnotationProperty>
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -145,14 +153,6 @@
         <rdfs:range rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpManufacturerPumpClass"/>
     </owl:ObjectProperty>
     
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
 
 
 
