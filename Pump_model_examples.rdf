@@ -114,6 +114,20 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/example/PumpG102 -->
+
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpG102">
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump"/>
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitRadial"/>
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithEndSuction"/>
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithOverhungDesign"/>
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage"/>
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithVoluteCasing"/>
+        <pump:hasManufacturer rdf:resource="https://nlp-tlp.org/ontology/pump/example/Grundfos"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/example/PumpW101 -->
 
     <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpW101">
