@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="https://nlp-tlp.org/ontology/manufacturer/ont/core/1.0.0" uri="manufacturer.rdf"/>
     <uri id="Imports Wizard Entry" name="https://nlp-tlp.org/ontology/pump/ont/core/1.0.0" uri="pump.rdf"/>
     <uri id="User Entered Import Resolution" name="https://nlp-tlp.org/ontology/pump/ont/1.0.0" uri="pump.rdf"/>
     <uri id="Imports Wizard Entry" name="http://rds.posccaesar.org/ontology/lis14/ont/core/4.2" uri="file:/C:/Users/00040628/LocalData/GitHub/IDO/ontology/LIS-14-for-FDIS.ttl"/>
