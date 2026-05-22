@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://nlp-tlp.org/ontology/pump/rule/core#"
+     xml:base="https://nlp-tlp.org/ontology/pump/rule/core"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pav="http://purl.org/pav/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdl="http://rds.posccaesar.org/ontology/lis14/rdl/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:pump="https://www.nlp-tlp.org/ontology/pump/rdl/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:pump-ont="https://www.nlp-tlp.org/ontology/pump/ont/"
+     xmlns:pump_rule="https://www.nlp-tlp.org/ontology/pump/rule/"
+     xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
+    <owl:Ontology rdf:about="https://nlp-tlp.org/ontology/pump/rule/core">
+        <owl:versionIRI rdf:resource="https://nlp-tlp.org/ontology/pump/rule/core/1.0.0"/>
+        <owl:imports rdf:resource="https://nlp-tlp.org/ontology/pump/ont/core/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/DoubleSuctionImpeller -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/DoubleSuctionImpeller">
+        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/SingleSuctionImpeller"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PositiveDisplacementPump -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PositiveDisplacementPump">
+        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/RotordynamicPump"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitAxial -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitAxial">
+        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitRadial"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithDiffuserCasing -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDiffuserCasing">
+        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithVoluteCasing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithDoubleActingStroke -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDoubleActingStroke">
+        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleActingStroke"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithMultiStage -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithMultiStage">
+        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithShaftOrientationHorizontal -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithShaftOrientationHorizontal">
+        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithShaftOrientationVertical"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSideDischarge -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSideDischarge">
+        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithTopDischarge"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/ReciprocatingPump -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ReciprocatingPump">
+        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/RotaryPDPump"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/AxialFlowPump"/>
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump"/>
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/MixedFlowPump"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ClosedImpeller"/>
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/OpenImpeller"/>
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/SemiOpenImpeller"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpDoubleVolute"/>
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpMultiVolute"/>
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpSingleVolute"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithBetweenBearingDesign"/>
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithOverhungDesign"/>
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithVerticalSuspensedDesign"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithBottomSuction"/>
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithEndSuction"/>
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSideSuction"/>
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithTopSuction"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDuplexDoubleCylinder"/>
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSimplexSingleCylinder"/>
+            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithTriplexTripleCylinder"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
