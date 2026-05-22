@@ -254,8 +254,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ClosedImpeller">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/OpenImpeller"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/SemiOpenImpeller"/>
         <rdfs:label xml:lang="en">Closed impeller</rdfs:label>
     </owl:Class>
     
@@ -281,7 +279,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/DoubleSuctionImpeller">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/SingleSuctionImpeller"/>
         <rdfs:label xml:lang="en">Double suction impeller</rdfs:label>
     </owl:Class>
     
@@ -392,7 +389,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/OpenImpeller">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/SemiOpenImpeller"/>
         <rdfs:label xml:lang="en">Open impeller</rdfs:label>
     </owl:Class>
     
@@ -451,7 +447,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PositiveDisplacementPump">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedMotion"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/RotordynamicPump"/>
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute pump type terminology for positive displacement pumps, with supporting ISO 15926-4 reference data categories for rotary and reciprocating pumps.</rdfs:comment>
         <rdfs:label xml:lang="en">Positive displacement pump</rdfs:label>
         <skos:definition xml:lang="en">type of pump that displaces a fixed volume of liquid by periodically enclosing it and forcing it from suction to discharge</skos:definition>
@@ -971,7 +966,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitAxial">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitRadial"/>
         <rdfs:label xml:lang="en">Pump with casing split axial</rdfs:label>
     </owl:Class>
     
@@ -990,7 +984,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDiffuserCasing">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithVoluteCasing"/>
         <rdfs:label xml:lang="en">Pump with diffuser casing</rdfs:label>
     </owl:Class>
     
@@ -1000,7 +993,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDoubleActingStroke">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleActingStroke"/>
     </owl:Class>
     
 
@@ -1033,7 +1025,6 @@
                 <owl:onClass rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage"/>
         <rdfs:label xml:lang="en">Pump with multi stage</rdfs:label>
     </owl:Class>
     
@@ -1052,7 +1043,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithShaftOrientationHorizontal">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithShaftOrientationVertical"/>
         <rdfs:label xml:lang="en">Pump with shaft orientation horizontal</rdfs:label>
     </owl:Class>
     
@@ -1071,7 +1061,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSideDischarge">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithTopDischarge"/>
         <rdfs:label xml:lang="en">Pump with side discharge</rdfs:label>
     </owl:Class>
     
@@ -1193,7 +1182,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ReciprocatingPump">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PositiveDisplacementPump"/>
-        <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/RotaryPDPump"/>
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute reciprocating pump terminology, with supporting ISO 15926-4 reference data item RECIPROCATING_PUMP.</rdfs:comment>
         <rdfs:label xml:lang="en">Reciprocating pump</rdfs:label>
         <skos:definition xml:lang="en">type of positive displacement pump that moves liquid by the back-and-forth motion of a piston, plunger, or diaphragm and usually uses inlet and discharge check valves</skos:definition>
