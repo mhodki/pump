@@ -89,6 +89,13 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithDuplexDoubleCylinder -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDuplexDoubleCylinder">
+    </rdf:Description>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithMultiStage -->
 
     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithMultiStage">
@@ -109,6 +116,27 @@
 
     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSideDischarge">
         <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithTopDischarge"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSimplexSingleCylinder -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSimplexSingleCylinder">
+    </rdf:Description>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleActingStroke -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleActingStroke">
+        </rdf:Description>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithTriplexTripleCylinder -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithTriplexTripleCylinder">
     </rdf:Description>
     
 

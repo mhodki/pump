@@ -178,6 +178,24 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/ont/core/PumpSinglePieceCasing -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/ont/core/PumpSinglePieceCasing">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasing"/>
+        <rdfs:label xml:lang="en">Pump single piece casing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/ont/core/PumpWithCasingSinglePiece -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/ont/core/PumpWithCasingSinglePiece">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
+        <rdfs:label xml:lang="en">Pump with casing single piece</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/ont/core/PumpWithConcentricCasing -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/ont/core/PumpWithConcentricCasing">
@@ -603,7 +621,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpDiffuser">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasing"/>
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpPart"/>
         <rdfs:label xml:lang="en">Pump diffuser casing</rdfs:label>
     </owl:Class>
     
@@ -965,6 +982,7 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDoubleActingStroke">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
+        <rdfs:label xml:lang="en">Pump with double acting stroke</rdfs:label>
     </owl:Class>
     
 
@@ -973,6 +991,7 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDuplexDoubleCylinder">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
+        <rdfs:label xml:lang="en">Pump with duplex double cylinder</rdfs:label>
     </owl:Class>
     
 
@@ -990,13 +1009,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithMultiStage">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedStages"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasImpeller"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Pump with multi stage</rdfs:label>
     </owl:Class>
     
@@ -1051,6 +1063,7 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSimplexSingleCylinder">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
+        <rdfs:label xml:lang="en">Pump with simplex single cylinder</rdfs:label>
     </owl:Class>
     
 
@@ -1059,6 +1072,7 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleActingStroke">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
+        <rdfs:label>Pump with simplex acting stroke</rdfs:label>
     </owl:Class>
     
 
@@ -1067,13 +1081,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedStages"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasImpeller"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Pump with single stage</rdfs:label>
     </owl:Class>
     
@@ -1128,6 +1135,7 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithTriplexTripleCylinder">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
+        <rdfs:label xml:lang="en">Pump with triplex triple cylinder</rdfs:label>
     </owl:Class>
     
 
@@ -1180,24 +1188,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/RotordynamicPump">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedMotion"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasCasing"/>
-                <owl:someValuesFrom rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasImpeller"/>
-                <owl:someValuesFrom rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasShaft"/>
-                <owl:someValuesFrom rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpShaft"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute rotodynamic pump definitions and terminology.</rdfs:comment>
         <rdfs:label xml:lang="en">Rotordynamic pump</rdfs:label>
         <skos:definition xml:lang="en">type of pump in which a rotating impeller or rotor continuously imparts kinetic energy to liquid and converts that energy into pressure or head</skos:definition>

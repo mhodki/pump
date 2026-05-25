@@ -29,7 +29,7 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Classes
+    // Annotation properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
@@ -37,11 +37,15 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/grundfos/product/Grundfos_NB_series -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/grundfos/product/Grundfos_NB_series"/>
-    
-
+  
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -89,10 +93,7 @@
     <!-- https://nlp-tlp.org/ontology/pump/example/PumpW101 -->
 
     <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpW101">
-        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump"/>
-        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitRadial"/>
-        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithEndSuction"/>
-        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage"/>
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
