@@ -12,16 +12,16 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
      xmlns:pump-ont="https://www.nlp-tlp.org/ontology/pump/ont/"
      xmlns:pump_rule="https://www.nlp-tlp.org/ontology/pump/rule/"
      xmlns:manufacturer="https://nlp-tlp.org/ontology/manufacturer/ont/"
-     xmlns:schema="http://schema.org/"
      xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://nlp-tlp.org/ontology/manufacturer/ont/core">
         <owl:versionIRI rdf:resource="https://nlp-tlp.org/ontology/manufacturer/ont/core/1.0.0"/>
-        <owl:imports rdf:resource="http://rds.posccaesar.org/ontology/lis14/ont/core/4.2"/>
     </owl:Ontology>
     
+
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -30,48 +30,31 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-        <!-- Declare schema.org properties as annotation properties so they appear in Protege's Annotation pane -->
-    <owl:AnnotationProperty rdf:about="http://schema.org/name"/>
-    <owl:AnnotationProperty rdf:about="http://schema.org/manufacturer"/>
-    <owl:AnnotationProperty rdf:about="http://schema.org/category"/>
-    <owl:AnnotationProperty rdf:about="http://schema.org/additionalType"/>
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-     
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
 
     
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
 
 
+    <!-- http://schema.org/additionalType -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/additionalType"/>
+    
+
+
+    <!-- http://schema.org/category -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/category"/>
+    
+
+
+    <!-- http://schema.org/manufacturer -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/manufacturer"/>
+    
+
+
+    <!-- http://schema.org/name -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/name"/>
 </rdf:RDF>
 
 
