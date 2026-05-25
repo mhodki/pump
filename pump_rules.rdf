@@ -33,22 +33,6 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump -->
-
-    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/ont/core/PumpWithConcentricCasing"/>
-                    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpDiffuser"/>
-                    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpVolute"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
     <!-- https://nlp-tlp.org/ontology/pump/rdl/DoubleSuctionImpeller -->
 
     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/DoubleSuctionImpeller">
@@ -89,13 +73,6 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithDuplexDoubleCylinder -->
-
-    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDuplexDoubleCylinder">
-    </rdf:Description>
-    
-
-
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithMultiStage -->
 
     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithMultiStage">
@@ -116,27 +93,6 @@
 
     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSideDischarge">
         <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithTopDischarge"/>
-    </rdf:Description>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSimplexSingleCylinder -->
-
-    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSimplexSingleCylinder">
-    </rdf:Description>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleActingStroke -->
-
-    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleActingStroke">
-        </rdf:Description>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithTriplexTripleCylinder -->
-
-    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithTriplexTripleCylinder">
     </rdf:Description>
     
 
