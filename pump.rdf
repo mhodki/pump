@@ -178,6 +178,15 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/ont/core/PumpWithConcentricCasing -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/ont/core/PumpWithConcentricCasing">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
+        <rdfs:label>Pump with concentric casing</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/rdl/AxialFlowImpeller -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/AxialFlowImpeller">

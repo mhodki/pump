@@ -33,6 +33,22 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/ont/core/PumpWithConcentricCasing"/>
+                    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpDiffuser"/>
+                    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpVolute"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/rdl/DoubleSuctionImpeller -->
 
     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/DoubleSuctionImpeller">

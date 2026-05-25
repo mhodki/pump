@@ -29,29 +29,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://schema.org/category -->
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/category"/>
-    
-
-
-    <!-- http://schema.org/manufacturer -->
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/manufacturer"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -73,6 +50,15 @@
         <schema:category>NB</schema:category>
         <schema:manufacturer>Grundfos</schema:manufacturer>
         <rdfs:label xml:lang="en">Grundfos NB series</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/example/Grundfos_NB_series_incorrect -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/example/Grundfos_NB_series_incorrect">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/ont/core/PumpProductClass"/>
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump"/>
     </owl:Class>
     
 
@@ -106,13 +92,23 @@
 
     <!-- https://nlp-tlp.org/ontology/pump/example/AH_model_type -->
 
-    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/AH_model_type"/>
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/AH_model_type">
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/example/Grundfos_NB_series"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- https://nlp-tlp.org/ontology/pump/example/Grundfos -->
 
     <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/Grundfos"/>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/example/Grundfos_NB_instance -->
+
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/Grundfos_NB_instance">
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/example/Grundfos_NB_series"/>
+    </owl:NamedIndividual>
     
 
 
@@ -150,9 +146,7 @@
 
     <!-- https://nlp-tlp.org/ontology/pump/example/PumpG102 -->
 
-    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpG102">
-        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/example/Grundfos_NB_series"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpG102"/>
     
 
 
