@@ -48,7 +48,7 @@
     <!-- https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/ont/core/PumpProductClass"/>
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/core/PumpProductClass"/>
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump"/>
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitRadial"/>
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage"/>
