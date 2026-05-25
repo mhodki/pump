@@ -32,45 +32,69 @@
     
 
 
-    <!-- https://www.nlp-tlp.org/ontology/pump/ont/HI_ID -->
+    <!-- https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_ID -->
 
-    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/ont/HI_ID">
+    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_ID"/>
+    
+
+
+    <!-- https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_URI -->
+
+    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_URI"/>
+    
+
+
+    <!-- https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_desc -->
+
+    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_desc"/>
+    
+
+
+    <!-- https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_name -->
+
+    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_name"/>
+    
+
+
+    <!-- https://www.nlp-tlp.org/ontology/pump/rdl/HI_ID -->
+
+    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/rdl/HI_ID">
         <rdfs:comment xml:lang="en">Hydraulic Institute ID for this class</rdfs:comment>
         <rdfs:label xml:lang="en">HI ID</rdfs:label>
     </owl:AnnotationProperty>
     
 
 
-    <!-- https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_ID -->
+    <!-- https://www.nlp-tlp.org/ontology/pump/rdl/ISO15926_ID -->
 
-    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_ID">
+    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/rdl/ISO15926_ID">
         <rdfs:comment xml:lang="en">ISO 15926-4 unique number for this class</rdfs:comment>
         <rdfs:label xml:lang="en">ISO 15926-4 ID</rdfs:label>
     </owl:AnnotationProperty>
     
 
 
-    <!-- https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_URI -->
+    <!-- https://www.nlp-tlp.org/ontology/pump/rdl/ISO15926_URI -->
 
-    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_URI">
+    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/rdl/ISO15926_URI">
         <rdfs:comment xml:lang="en">15926-4 URI for this class</rdfs:comment>
         <rdfs:label xml:lang="en">ISO 15926-4 URI</rdfs:label>
     </owl:AnnotationProperty>
     
 
 
-    <!-- https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_desc -->
+    <!-- https://www.nlp-tlp.org/ontology/pump/rdl/ISO15926_desc -->
 
-    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_desc">
+    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/rdl/ISO15926_desc">
         <rdfs:comment xml:lang="en">15926-4 description for this class</rdfs:comment>
         <rdfs:label xml:lang="en">ISO 15926-4 description</rdfs:label>
     </owl:AnnotationProperty>
     
 
 
-    <!-- https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_name -->
+    <!-- https://www.nlp-tlp.org/ontology/pump/rdl/ISO15926_name -->
 
-    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/ont/ISO15926_name">
+    <owl:AnnotationProperty rdf:about="https://www.nlp-tlp.org/ontology/pump/rdl/ISO15926_name">
         <rdfs:comment xml:lang="en">15926-4 name for this class</rdfs:comment>
         <rdfs:label xml:lang="en">ISO 15926-4 name</rdfs:label>
     </owl:AnnotationProperty>
@@ -166,15 +190,6 @@
     <!-- http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact -->
 
     <owl:Class rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact"/>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/ont/core/PumpProductClass -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/ont/core/PumpProductClass">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/Pump"/>
-        <rdfs:label xml:lang="en">Pump product class</rdfs:label>
-    </owl:Class>
     
 
 
@@ -1113,11 +1128,11 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithVerticalSuspensedDesign -->
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithVerticalSuspendedDesign -->
 
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithVerticalSuspensedDesign">
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithVerticalSuspendedDesign">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with vertical suspensed design</rdfs:label>
+        <rdfs:label xml:lang="en">Pump with vertical suspended design</rdfs:label>
     </owl:Class>
     
 
@@ -1239,6 +1254,78 @@
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/MixedFlowPump"/>
         <rdfs:label xml:lang="en">Vertical mixed flow pump</rdfs:label>
         <skos:definition xml:lang="en">type of rotodynamic mixed-flow pump with a vertical shaft arrangement in which the impeller imparts both radial and axial velocity components to the liquid</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/core/PumpProductClass -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/core/PumpProductClass">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/Pump"/>
+        <rdfs:label xml:lang="en">Pump product class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.nlp-tlp.org/ontology/pump/rdl/CasingAxialSplit -->
+
+    <owl:Class rdf:about="https://www.nlp-tlp.org/ontology/pump/rdl/CasingAxialSplit">
+        <rdfs:subClassOf rdf:resource="https://www.nlp-tlp.org/ontology/pump/rdl/PumpSplitCasing"/>
+        <rdfs:label xml:lang="en">Casing axial split</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.nlp-tlp.org/ontology/pump/rdl/CasingRadialSplit -->
+
+    <owl:Class rdf:about="https://www.nlp-tlp.org/ontology/pump/rdl/CasingRadialSplit">
+        <rdfs:subClassOf rdf:resource="https://www.nlp-tlp.org/ontology/pump/rdl/PumpSplitCasing"/>
+        <rdfs:label xml:lang="en">Casing radial split</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.nlp-tlp.org/ontology/pump/rdl/PumpConcentricCasing -->
+
+    <owl:Class rdf:about="https://www.nlp-tlp.org/ontology/pump/rdl/PumpConcentricCasing">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasing"/>
+        <rdfs:label xml:lang="en">Pump concentric casing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.nlp-tlp.org/ontology/pump/rdl/PumpSinglePieceCasing -->
+
+    <owl:Class rdf:about="https://www.nlp-tlp.org/ontology/pump/rdl/PumpSinglePieceCasing">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasing"/>
+        <rdfs:label xml:lang="en">Pump single price casing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.nlp-tlp.org/ontology/pump/rdl/PumpSplitCasing -->
+
+    <owl:Class rdf:about="https://www.nlp-tlp.org/ontology/pump/rdl/PumpSplitCasing">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasing"/>
+        <rdfs:label xml:lang="en">Pump split casing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSinglePiece -->
+
+    <owl:Class rdf:about="https://www.nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSinglePiece">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
+        <rdfs:label xml:lang="en">Pump with casing single piece</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.nlp-tlp.org/ontology/pump/rdl/PumpWithConcentricCasing -->
+
+    <owl:Class rdf:about="https://www.nlp-tlp.org/ontology/pump/rdl/PumpWithConcentricCasing">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
+        <rdfs:label xml:lang="en">Pump with concentric casing</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
