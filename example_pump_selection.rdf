@@ -2,16 +2,18 @@
 <rdf:RDF xmlns="https://nlp-tlp.org/ontology/pump/example#"
      xml:base="https://nlp-tlp.org/ontology/pump/example"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:pump-ont="https://nlp-tlp.org/ontology/pump/ont/"
+     xmlns:ont="https://www.nlp-tlp.org/ontology/pump/ont/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:pav="http://purl.org/pav/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:rdl="http://rds.posccaesar.org/ontology/lis14/rdl/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ont1="https://nlp-tlp.org/ontology/pump/ont/"
      xmlns:pump="https://nlp-tlp.org/ontology/pump/rdl/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:shacl="http://www.w3.org/ns/shacl#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/"
      xmlns:pump_ex="https://nlp-tlp.org/ontology/pump/example/"
@@ -37,6 +39,12 @@
     
 
 
+    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart -->
+
+    <owl:AnnotationProperty rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -45,7 +53,20 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-  
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/grundfos/product/Grundfos_NB_series -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/grundfos/product/Grundfos_NB_series"/>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/SingleStageImpeller -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/SingleStageImpeller"/>
+    
+
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -79,7 +100,7 @@
     <!-- https://nlp-tlp.org/ontology/pump/example/PumpG101_volute -->
 
     <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpG101_volute">
-        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpVolute"/>
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpVoluteCasing"/>
     </owl:NamedIndividual>
     
 
@@ -93,7 +114,37 @@
     <!-- https://nlp-tlp.org/ontology/pump/example/PumpW101 -->
 
     <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpW101">
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump"/>
         <rdf:type rdf:resource="https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series"/>
+        <rdl:hasAssembledPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpW101_casing"/>
+        <rdl:hasAssembledPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpW101_impeller"/>
+        <rdl:hasAssembledPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpW101_shaft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/example/PumpW101_casing -->
+
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpW101_casing">
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CasingRadialSplit"/>
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpVoluteCasing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/example/PumpW101_impeller -->
+
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpW101_impeller">
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller"/>
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/SingleStageImpeller"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/example/PumpW101_shaft -->
+
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpW101_shaft">
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpShaft"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

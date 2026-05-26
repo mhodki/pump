@@ -2,18 +2,20 @@
 <rdf:RDF xmlns="https://nlp-tlp.org/ontology/pump/rule/core#"
      xml:base="https://nlp-tlp.org/ontology/pump/rule/core"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ont="https://nlp-tlp.org/ontology/pump/ont/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:pav="http://purl.org/pav/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:rdl="http://rds.posccaesar.org/ontology/lis14/rdl/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:pump="https://nlp-tlp.org/ontology/pump/rdl/"
+     xmlns:pump="https://www.nlp-tlp.org/ontology/pump/rdl/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdl1="https://nlp-tlp.org/ontology/pump/rdl/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:pump-ont="https://nlp-tlp.org/ontology/pump/ont/"
-     xmlns:pump_rule="https://nlp-tlp.org/ontology/pump/rule/"
+     xmlns:pump-ont="https://www.nlp-tlp.org/ontology/pump/ont/"
+     xmlns:pump_rule="https://www.nlp-tlp.org/ontology/pump/rule/"
      xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://nlp-tlp.org/ontology/pump/rule/core">
         <owl:versionIRI rdf:resource="https://nlp-tlp.org/ontology/pump/rule/core/1.0.0"/>
@@ -25,7 +27,7 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Rules
+    // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
@@ -48,18 +50,18 @@
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSinglePiece"/>
                     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitAxial"/>
                     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitRadial"/>
-                    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSinglePiece"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithConcentricCasing"/>
                     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDiffuserCasing"/>
                     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithVoluteCasing"/>
-                    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithConcentricCasing"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -79,6 +81,19 @@
 
     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PositiveDisplacementPump">
         <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/RotordynamicPump"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSinglePiece -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSinglePiece">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasArrangedPart"/>
+                <owl:someValuesFrom rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpSinglePieceCasing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </rdf:Description>
     
 
@@ -110,6 +125,19 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithConcentricCasing -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithConcentricCasing">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasArrangedPart"/>
+                <owl:someValuesFrom rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpConcentricCasing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithDiffuserCasing -->
 
     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDiffuserCasing">
@@ -135,6 +163,13 @@
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithMultiStage -->
 
     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithMultiStage">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage"/>
     </rdf:Description>
     
@@ -152,6 +187,20 @@
 
     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSideDischarge">
         <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithTopDischarge"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage -->
+
+    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </rdf:Description>
     
 
@@ -181,32 +230,6 @@
 
     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ReciprocatingPump">
         <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/RotaryPDPump"/>
-    </rdf:Description>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSinglePiece -->
-
-    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSinglePiece">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasArrangedPart"/>
-                <owl:someValuesFrom rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpSinglePieceCasing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithConcentricCasing -->
-
-    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithConcentricCasing">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasArrangedPart"/>
-                <owl:someValuesFrom rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpConcentricCasing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </rdf:Description>
     
 

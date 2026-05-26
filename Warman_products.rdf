@@ -77,16 +77,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-<sh:NodeShape rdf:about="https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_PUMP_series_Shape">
+<sh:NodeShape rdf:about="https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series_Shape">
 
     <sh:targetClass rdf:resource="https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series"/>
 
     <sh:property>
         <rdf:Description>
-            <sh:path rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPart"/>
+            <sh:path rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
             <sh:qualifiedValueShape>
                 <rdf:Description>
-                    <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/RadialSplitCasing"/>
+                    <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CasingRadialSplit"/>
                 </rdf:Description>
             </sh:qualifiedValueShape>
             <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
@@ -96,7 +96,7 @@
 
     <sh:property>
         <rdf:Description>
-            <sh:path rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPart"/>
+            <sh:path rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
             <sh:qualifiedValueShape>
                 <rdf:Description>
                     <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/SingleStageImpeller"/>
@@ -109,10 +109,10 @@
 
     <sh:property>
         <rdf:Description>
-            <sh:path rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPart"/>
+            <sh:path rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
             <sh:qualifiedValueShape>
                 <rdf:Description>
-                    <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/VoluteCasing"/>
+                    <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpVoluteCasing"/>
                 </rdf:Description>
             </sh:qualifiedValueShape>
             <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
@@ -122,7 +122,7 @@
 
         <sh:property>
         <rdf:Description>
-            <sh:path rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPart"/>
+            <sh:path rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
             <sh:qualifiedValueShape>
                 <rdf:Description>
                     <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpShaft"/>
@@ -145,6 +145,7 @@ SHACL code to run in Powershell
 pyshacl `
   -s Warman_products.rdf `
   -e Warman_products.rdf `
+  -e pump.rdf `
   -i rdfs `
   -f human `
   example_pump_selection.rdf
