@@ -32,27 +32,27 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/ont/ISO15926_ID -->
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/ISO15926_ID -->
 
-    <owl:AnnotationProperty rdf:about="https://nlp-tlp.org/ontology/pump/ont/ISO15926_ID"/>
+    <owl:AnnotationProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ISO15926_ID"/>
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/ont/ISO15926_URI -->
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/ISO15926_URI -->
 
-    <owl:AnnotationProperty rdf:about="https://nlp-tlp.org/ontology/pump/ont/ISO15926_URI"/>
+    <owl:AnnotationProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ISO15926_URI"/>
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/ont/ISO15926_desc -->
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/ISO15926_desc -->
 
-    <owl:AnnotationProperty rdf:about="https://nlp-tlp.org/ontology/pump/ont/ISO15926_desc"/>
+    <owl:AnnotationProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ISO15926_desc"/>
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/ont/ISO15926_name -->
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/ISO15926_name -->
 
-    <owl:AnnotationProperty rdf:about="https://nlp-tlp.org/ontology/pump/ont/ISO15926_name"/>
+    <owl:AnnotationProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ISO15926_name"/>
     
 
 
@@ -485,7 +485,7 @@
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/Pump">
         <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact"/>
         <owl:disjointWith rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpPart"/>
-        <rdfs:isDefinedBy>https://nlp-tlp.org/ontology/pump/ont</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>https://nlp-tlp.org/ontology/pump/ont/core</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Pump</rdfs:label>
     </owl:Class>
     

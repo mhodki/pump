@@ -37,12 +37,6 @@
 
     
 
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump -->
-
-    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithOverhungDesign"/>
-    </rdf:Description>
     
 
 
@@ -66,7 +60,8 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+ 
+
 
 
     <!-- https://nlp-tlp.org/ontology/warman/wproducts/Warman -->
@@ -88,7 +83,7 @@
 
     <sh:property>
         <rdf:Description>
-            <sh:path rdf:resource="https://nlp-tlp.org/ontology/pump/ont/hasAssembledPart"/>
+            <sh:path rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPart"/>
             <sh:qualifiedValueShape>
                 <rdf:Description>
                     <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/RadialSplitCasing"/>
@@ -101,7 +96,7 @@
 
     <sh:property>
         <rdf:Description>
-            <sh:path rdf:resource="https://nlp-tlp.org/ontology/pump/ont/hasAssembledPart"/>
+            <sh:path rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPart"/>
             <sh:qualifiedValueShape>
                 <rdf:Description>
                     <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/SingleStageImpeller"/>
@@ -114,7 +109,7 @@
 
     <sh:property>
         <rdf:Description>
-            <sh:path rdf:resource="https://nlp-tlp.org/ontology/pump/ont/hasAssembledPart"/>
+            <sh:path rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPart"/>
             <sh:qualifiedValueShape>
                 <rdf:Description>
                     <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/VoluteCasing"/>
@@ -127,7 +122,7 @@
 
         <sh:property>
         <rdf:Description>
-            <sh:path rdf:resource="https://nlp-tlp.org/ontology/pump/ont/hasAssembledPart"/>
+            <sh:path rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPart"/>
             <sh:qualifiedValueShape>
                 <rdf:Description>
                     <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpShaft"/>
@@ -149,7 +144,7 @@
 SHACL code to run in Powershell
 pyshacl `
   -s Warman_products.rdf `
-  -e pump.rdf `
+  -e Warman_products.rdf `
   -i rdfs `
   -f human `
   example_pump_selection.rdf
