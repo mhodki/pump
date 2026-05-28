@@ -2,7 +2,6 @@
 <rdf:RDF xmlns="https://nlp-tlp.org/ontology/grundfos/gproducts#"
      xml:base="https://nlp-tlp.org/ontology/grundfos/gproducts"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:pump-ont="https://nlp-tlp.org/ontology/pump/ont/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:pav="http://purl.org/pav/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -15,6 +14,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/"
      xmlns:grundfos="https://nlp-tlp.org/ontology/grundfos/gproducts/"
+     xmlns:pump-ont="https://nlp-tlp.org/ontology/pump/ont/"
      xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://nlp-tlp.org/ontology/grundfos/gproducts">
         <owl:versionIRI rdf:resource="https://nlp-tlp.org/ontology/grundfos/gproducts/1.0"/>
@@ -40,13 +40,13 @@
     <!-- https://nlp-tlp.org/ontology/grundfos/gproducts/Grundfos_NB_series -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/grundfos/gproducts/Grundfos_NB_series">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/core/PumpProductClass"/>
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump"/>
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitRadial"/>
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithEndSuction"/>
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithOverhungDesign"/>
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage"/>
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithVoluteCasing"/>
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/core/PumpProductClass"/>
         <schema:category>NB</schema:category>
         <schema:manufacturer>Grundfos</schema:manufacturer>
         <rdfs:label xml:lang="en">Grundfos NB series</rdfs:label>
@@ -57,8 +57,8 @@
     <!-- https://nlp-tlp.org/ontology/grundfos/gproducts/Grundfos_NB_series_incorrect -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/grundfos/gproducts/Grundfos_NB_series_incorrect">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/core/PumpProductClass"/>
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump"/>
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/core/PumpProductClass"/>
     </owl:Class>
     
 

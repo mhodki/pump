@@ -1291,6 +1291,22 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/SubmersiblePump -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/SubmersiblePump">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpType"/>
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/RotordynamicPump"/>
+        <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute rotary pump terminology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Submersible pump</rdfs:label>
+        <skos:definition xml:lang="en">type of rotodynamic pump designed to be submerged in the fluid it pumps</skos:definition>
+        <ont:ISO15926_ID>8212</ont:ISO15926_ID>
+        <ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/SUBMERSIBLE_PUMP</ont:ISO15926_URI>
+        <ont:ISO15926_desc>A &lt;SUBMERSIBLE PUMP&gt; is an &lt;ARTEFACT&gt; and a &lt;PUMP&gt; that is capable of operating when submerged in the liquid it is intended to pump.</ont:ISO15926_desc>
+        <ont:ISO15926_name>SUBMERSIBLE PUMP</ont:ISO15926_name>
+    </owl:Class>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/rdl/VanePump -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/VanePump">
