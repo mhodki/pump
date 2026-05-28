@@ -114,6 +114,7 @@
     <!-- https://nlp-tlp.org/ontology/pump/example/PumpW101 -->
 
     <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpW101">
+        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series"/>
         <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump"/>
         <rdl:hasAssembledPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpW101_casing"/>
         <rdl:hasAssembledPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpW101_impeller"/>
