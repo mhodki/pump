@@ -94,22 +94,6 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump -->
-
-    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithBetweenBearingDesign"/>
-                    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithOverhungDesign"/>
-                    <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithVerticalSuspendedDesign"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
     <!-- https://nlp-tlp.org/ontology/pump/rdl/DoubleSuctionImpeller -->
 
     <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/DoubleSuctionImpeller">
@@ -186,14 +170,6 @@
             <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpDoubleVolute"/>
             <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpMultiVolute"/>
             <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpSingleVolute"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithBetweenBearingDesign"/>
-            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithOverhungDesign"/>
-            <rdf:Description rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithVerticalSuspendedDesign"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

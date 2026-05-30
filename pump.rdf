@@ -236,6 +236,22 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/BearingHousingBetweenBearingDesign -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/BearingHousingBetweenBearingDesign">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpBearingHousing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/BearingHousingOverhungDesign -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/BearingHousingOverhungDesign">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpBearingHousing"/>
+    </owl:Class>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/rdl/CasingAxialSplit -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CasingAxialSplit">
@@ -967,10 +983,10 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpShaftOrientation -->
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpShaftHorizontalOrientation -->
 
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpShaftOrientation">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpFeature"/>
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpShaftHorizontalOrientation">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpShaft"/>
     </owl:Class>
     
 
@@ -1020,6 +1036,22 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpShaftSleeve">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpPart"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpShaftVerticalOrientation -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpShaftVerticalOrientation">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpShaft"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpShaftVerticalSuspendedDesign -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpShaftVerticalSuspendedDesign">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpShaft"/>
     </owl:Class>
     
 
@@ -1120,19 +1152,10 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithBetweenBearingDesign -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithBetweenBearingDesign">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with between bearing design</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithDoubleActingStroke -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDoubleActingStroke">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/ReciprocatingPump"/>
         <rdfs:label xml:lang="en">Pump with double acting stroke</rdfs:label>
     </owl:Class>
     
@@ -1141,7 +1164,7 @@
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithDuplexDoubleCylinder -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDuplexDoubleCylinder">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/ReciprocatingPump"/>
         <rdfs:label xml:lang="en">Pump with duplex double cylinder</rdfs:label>
     </owl:Class>
     
@@ -1156,19 +1179,10 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithOverhungDesign -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithOverhungDesign">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with overhung design</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSimplexSingleCylinder -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSimplexSingleCylinder">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/ReciprocatingPump"/>
         <rdfs:label xml:lang="en">Pump with simplex single cylinder</rdfs:label>
     </owl:Class>
     
@@ -1177,7 +1191,7 @@
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleActingStroke -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleActingStroke">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/ReciprocatingPump"/>
         <rdfs:label>Pump with simplex acting stroke</rdfs:label>
     </owl:Class>
     
@@ -1188,15 +1202,6 @@
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSingleStage">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedStages"/>
         <rdfs:label xml:lang="en">Pump with single stage</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/Pump"/>
-        <rdfs:label xml:lang="en">Pump with specified features</rdfs:label>
     </owl:Class>
     
 
@@ -1222,17 +1227,8 @@
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithTriplexTripleCylinder -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithTriplexTripleCylinder">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/ReciprocatingPump"/>
         <rdfs:label xml:lang="en">Pump with triplex triple cylinder</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithVerticalSuspendedDesign -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithVerticalSuspendedDesign">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with vertical suspended design</rdfs:label>
     </owl:Class>
     
 
@@ -1304,22 +1300,6 @@
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/SemiOpenImpeller">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign"/>
         <rdfs:label xml:lang="en">Semi open impeller</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/ShaftOrientationHorizontal -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ShaftOrientationHorizontal">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpShaftOrientation"/>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/ShaftOrientationVertical -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ShaftOrientationVertical">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpShaftOrientation"/>
     </owl:Class>
     
 
