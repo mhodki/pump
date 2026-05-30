@@ -114,10 +114,18 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPumpPart -->
+
+    <owl:ObjectProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPumpPart">
+        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/rdl/hasBase -->
 
     <owl:ObjectProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/hasBase">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
+        <rdfs:subPropertyOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPumpPart"/>
     </owl:ObjectProperty>
     
 
@@ -125,7 +133,7 @@
     <!-- https://nlp-tlp.org/ontology/pump/rdl/hasBearing -->
 
     <owl:ObjectProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/hasBearing">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
+        <rdfs:subPropertyOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPumpPart"/>
     </owl:ObjectProperty>
     
 
@@ -133,7 +141,7 @@
     <!-- https://nlp-tlp.org/ontology/pump/rdl/hasCasing -->
 
     <owl:ObjectProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/hasCasing">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
+        <rdfs:subPropertyOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPumpPart"/>
     </owl:ObjectProperty>
     
 
@@ -141,7 +149,7 @@
     <!-- https://nlp-tlp.org/ontology/pump/rdl/hasCasingLiner -->
 
     <owl:ObjectProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/hasCasingLiner">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
+        <rdfs:subPropertyOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPumpPart"/>
     </owl:ObjectProperty>
     
 
@@ -149,7 +157,7 @@
     <!-- https://nlp-tlp.org/ontology/pump/rdl/hasImpeller -->
 
     <owl:ObjectProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/hasImpeller">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
+        <rdfs:subPropertyOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPumpPart"/>
     </owl:ObjectProperty>
     
 
@@ -157,7 +165,15 @@
     <!-- https://nlp-tlp.org/ontology/pump/rdl/hasPiston -->
 
     <owl:ObjectProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/hasPiston">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
+        <rdfs:subPropertyOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPumpPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/hasPumpFeature -->
+
+    <owl:ObjectProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/hasPumpFeature">
+        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasFeature"/>
     </owl:ObjectProperty>
     
 
@@ -165,7 +181,7 @@
     <!-- https://nlp-tlp.org/ontology/pump/rdl/hasShaft -->
 
     <owl:ObjectProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/hasShaft">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
+        <rdfs:subPropertyOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPumpPart"/>
     </owl:ObjectProperty>
     
 
@@ -173,7 +189,7 @@
     <!-- https://nlp-tlp.org/ontology/pump/rdl/hasShaftSeal -->
 
     <owl:ObjectProperty rdf:about="https://nlp-tlp.org/ontology/pump/rdl/hasShaftSeal">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPart"/>
+        <rdfs:subPropertyOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/hasAssembledPumpPart"/>
     </owl:ObjectProperty>
     
 
@@ -229,11 +245,107 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/CasingConcentric -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CasingConcentric">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasingFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/CasingDiffuser -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CasingDiffuser">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasingFeature"/>
+    </owl:Class>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/rdl/CasingRadialSplit -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CasingRadialSplit">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpSplitCasing"/>
         <rdfs:label xml:lang="en">Casing radial split</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/CasingSinglePiece -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CasingSinglePiece">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasingFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/CasingSplitAxial -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CasingSplitAxial">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasingFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/CasingSplitRadial -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CasingSplitRadial">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasingFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/CasingVolute -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CasingVolute">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasingFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/CasingWithBottomSuction -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CasingWithBottomSuction">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasingFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/CasingWithEndSuction -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CasingWithEndSuction">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasingFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/CasingWithSideDischarge -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CasingWithSideDischarge">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasingFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/CasingWithSideSuction -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CasingWithSideSuction">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasingFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/CasingWithTopDischarge -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CasingWithTopDischarge">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasingFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/CasingWithTopSuction -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/CasingWithTopSuction">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpCasingFeature"/>
     </owl:Class>
     
 
@@ -585,6 +697,14 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpCasingFeature -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpCasingFeature">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpFeature"/>
+    </owl:Class>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpConcentricCasing -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpConcentricCasing">
@@ -662,6 +782,14 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpFeature -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpFeature">
+        <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Feature"/>
+    </owl:Class>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpFrame -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpFrame">
@@ -714,6 +842,22 @@
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerDesign">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/Pump"/>
         <rdfs:label xml:lang="en">Pump impeller design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerMultiStage -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerMultiStage">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerSingleStage -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerSingleStage">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller"/>
     </owl:Class>
     
 
@@ -819,6 +963,14 @@
         <ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/PUMP_SHAFT</ont:ISO15926_URI>
         <ont:ISO15926_desc>A &lt;PUMP SHAFT&gt; is a &lt;SHAFT&gt; of a pump that is provided with impeller(s), bearings, bushings, sealing elements etc.</ont:ISO15926_desc>
         <ont:ISO15926_name>PUMP SHAFT</ont:ISO15926_name>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpShaftOrientation -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpShaftOrientation">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpFeature"/>
     </owl:Class>
     
 
@@ -977,60 +1129,6 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithBottomSuction -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithBottomSuction">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with bottom suction</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSinglePiece -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSinglePiece">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with casing single piece</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitAxial -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitAxial">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with casing split axial</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitRadial -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithCasingSplitRadial">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with casing split radial</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithConcentricCasing -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithConcentricCasing">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with concentric casing</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithDiffuserCasing -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDiffuserCasing">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with diffuser casing</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithDoubleActingStroke -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithDoubleActingStroke">
@@ -1049,15 +1147,6 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithEndSuction -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithEndSuction">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with end suction</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithMultiStage -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithMultiStage">
@@ -1072,42 +1161,6 @@
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithOverhungDesign">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
         <rdfs:label xml:lang="en">Pump with overhung design</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithShaftOrientationHorizontal -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithShaftOrientationHorizontal">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with shaft orientation horizontal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithShaftOrientationVertical -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithShaftOrientationVertical">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with shaft orientation vertical</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSideDischarge -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSideDischarge">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with side discharge</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithSideSuction -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSideSuction">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with side suction</rdfs:label>
     </owl:Class>
     
 
@@ -1166,24 +1219,6 @@
     
 
 
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithTopDischarge -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithTopDischarge">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with top discharge</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithTopSuction -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithTopSuction">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with top suction</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithTriplexTripleCylinder -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithTriplexTripleCylinder">
@@ -1198,15 +1233,6 @@
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithVerticalSuspendedDesign">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
         <rdfs:label xml:lang="en">Pump with vertical suspended design</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp-tlp.org/ontology/pump/rdl/PumpWithVoluteCasing -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpWithVoluteCasing">
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpWithSpecifiedFeatures"/>
-        <rdfs:label xml:lang="en">Pump with volute casing</rdfs:label>
     </owl:Class>
     
 
@@ -1282,6 +1308,22 @@
     
 
 
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/ShaftOrientationHorizontal -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ShaftOrientationHorizontal">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpShaftOrientation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/pump/rdl/ShaftOrientationVertical -->
+
+    <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/ShaftOrientationVertical">
+        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpShaftOrientation"/>
+    </owl:Class>
+    
+
+
     <!-- https://nlp-tlp.org/ontology/pump/rdl/SingleSuctionImpeller -->
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/SingleSuctionImpeller">
@@ -1295,7 +1337,6 @@
 
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/SubmersiblePump">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpType"/>
-        <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/RotordynamicPump"/>
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute rotary pump terminology.</rdfs:comment>
         <rdfs:label xml:lang="en">Submersible pump</rdfs:label>
         <skos:definition xml:lang="en">type of rotodynamic pump designed to be submerged in the fluid it pumps</skos:definition>
