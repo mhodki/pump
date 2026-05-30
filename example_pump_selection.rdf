@@ -61,13 +61,6 @@
 
     
 
-
-    <!-- https://nlp-tlp.org/ontology/grundfos/product/Grundfos_NB_series -->
-
-    <owl:Class rdf:about="https://nlp-tlp.org/ontology/grundfos/product/Grundfos_NB_series"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -82,7 +75,6 @@
     <!-- https://nlp-tlp.org/ontology/pump/example/PumpG101 -->
 
     <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpG101">
-        <rdf:type rdf:resource="https://nlp-tlp.org/ontology/grundfos/product/Grundfos_NB_series"/>
         <rdl:hasAssembledPumpPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpG101_impeller"/>
         <rdl:hasAssembledPumpPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpG101_volute"/>
     </owl:NamedIndividual>

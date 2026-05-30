@@ -2,7 +2,6 @@
 <rdf:RDF xmlns="https://nlp-tlp.org/ontology/pump/rule/core#"
      xml:base="https://nlp-tlp.org/ontology/pump/rule/core"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ont="https://nlp-tlp.org/ontology/pump/ont/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:pav="http://purl.org/pav/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"

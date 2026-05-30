@@ -109,6 +109,11 @@
 
 
     <!-- https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series_Shape -->
+    <!-- This individual defines the SHACL shape for the WARMAN_AH_series pump. It specifies that any pump that is an instance of the WARMAN_AH_series must be a CentrifugalPump and must have at least one assembled part that is a VoluteCasing, at least one assembled part that is a SingleStageImpeller, at least one assembled part that is a PumpShaft, and at least one assembled part that is a RadialSplitCasing. -->
+     <!-- The SHACL shape defined by this individual can be used to validate instances of pumps in the WARMAN_AH_series to ensure that they conform to the specified structure and components. -->
+     <!-- The information in this SHACL shape is based on the WARMAn Centrifugal Slurry Pump AM Pump brochure. This is designed for continuous, heavy duty pumping or highly abrasive dense slurries-->
+     <!-- Key distinguishing design features are through bolt design of the radial split casing, fully lined casing, elastomer or alloy bolt in liners, overhang impeller design, expeller, interchangeable seal arrangement-->
+
 
     <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series_Shape">
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
