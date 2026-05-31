@@ -1,15 +1,35 @@
 @prefix manufacturer: <https://nlp-tlp.org/ontology/manufacturer/ont/> .
+@prefix pump: <https://nlp-tlp.org/ontology/pump/rdl/> .
+@prefix pump_rule: <https://nlp-tlp.org/ontology/pump/rule/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lis: <http://rds.posccaesar.org/ontology/lis14/rdl/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix schema1: <http://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/> .
 
-schema1:additionalType a owl:AnnotationProperty .
 
-schema1:category a owl:AnnotationProperty .
+<https://nlp-tlp.org/ontology/manufacturer/ont/core> a owl:Ontology ;
+    owl:versionIRI <https://nlp-tlp.org/ontology/manufacturer/ont/core/1.0.0> ;
+    dcterms:title "Ontology for Manufacturers information" ;
+    dcterms:licence "Apache Licence 2.0" ;
+    dcterms:contributor "https://orcid.org/0000-0002-7336-3932" ;
+    dcterms:description "Terms and properties for manufacturer concepts"@en ;
+    rdfs:label "Manufacturer Concepts"@en .
 
-schema1:manufacturer a owl:AnnotationProperty .
+#################################################################
+#    Annotation properties
+################################################################# 
 
-schema1:name a owl:AnnotationProperty .
+schema:additionalType a owl:AnnotationProperty .
 
-manufacturer:core a owl:Ontology ;
-    owl:versionIRI <https://nlp-tlp.org/ontology/manufacturer/ont/core/1.0.0> .
+schema:category a owl:AnnotationProperty .
+
+schema:manufacturer a owl:AnnotationProperty .
+
+schema:name a owl:AnnotationProperty .
 

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="https://nlp-tlp.org/ontology/manufacturer/ont/" uri="manufacturer.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://nlp-tlp.org/ontology/process_fluid/rdl/" uri="process_fluid.ttl"/>
     <uri id="Imports Wizard Entry" name="http://rds.posccaesar.org/ontology/lis14/ont/core/4.2" uri="LIS-14-for-FDIS.ttl"/>
     <uri id="Imports Wizard Entry" name="https://nlp-tlp.org/ontology/grundfos/gproducts/1.0" uri="Grundfos_products.rdf"/>
     <uri id="Imports Wizard Entry" name="https://nlp-tlp.org/ontology/warman/wproducts/1.0" uri="Warman_products.rdf"/>
