@@ -1,0 +1,38 @@
+@prefix lis: <http://rds.posccaesar.org/ontology/lis14/rdl/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pfluid: <https://nlp-tlp.org/ontology/process_fluid/rdl/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://nlp-tlp.org/ontology/process_fluid/rdl> a owl:Ontology ;
+    owl:imports <http://rds.posccaesar.org/ontology/lis14/ont/core/4.2> ;
+    owl:versionIRI pfluid:1.0.0 .
+
+pfluid:DenseAbrasiveSlurry a owl:Class ;
+    rdfs:subClassOf pfluid:Slurry .
+
+pfluid:PotableWater a owl:Class ;
+    rdfs:subClassOf pfluid:FluidMaterial .
+
+pfluid:ProcessFluid a owl:Class ;
+    rdfs:subClassOf pfluid:FluidMaterial .
+
+pfluid:ProducedWater a owl:Class ;
+    rdfs:subClassOf pfluid:FluidMaterial .
+
+pfluid:Sewage a owl:Class ;
+    rdfs:subClassOf pfluid:FluidMaterial .
+
+pfluid:hasFluidMaterialType a owl:ObjectProperty ;
+    rdfs:domain pfluid:FluidStream ;
+    rdfs:range pfluid:FluidMaterial ;
+    rdfs:subPropertyOf lis:hasMaterialPart .
+
+pfluid:FluidStream a owl:Class ;
+    rdfs:subClassOf lis:Stream .
+
+pfluid:Slurry a owl:Class ;
+    rdfs:subClassOf pfluid:FluidMaterial .
+
+pfluid:FluidMaterial a owl:Class ;
+    rdfs:subClassOf lis:Compound .
+

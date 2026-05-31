@@ -1,0 +1,15 @@
+@prefix manufacturer: <https://nlp-tlp.org/ontology/manufacturer/ont/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema1: <http://schema.org/> .
+
+schema1:additionalType a owl:AnnotationProperty .
+
+schema1:category a owl:AnnotationProperty .
+
+schema1:manufacturer a owl:AnnotationProperty .
+
+schema1:name a owl:AnnotationProperty .
+
+manufacturer:core a owl:Ontology ;
+    owl:versionIRI <https://nlp-tlp.org/ontology/manufacturer/ont/core/1.0.0> .
+
