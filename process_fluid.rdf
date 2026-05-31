@@ -5,7 +5,7 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:pav="http://purl.org/pav/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:rdl="http://rds.posccaesar.org/ontology/lis14/rdl/"
+     xmlns:lis="http://rds.posccaesar.org/ontology/lis14/rdl/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:pump="https://nlp-tlp.org/ontology/pump/rdl/"
@@ -14,7 +14,6 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:pfluid="https://nlp-tlp.org/ontology/process_fluid/rdl/"
      xmlns:schema="http://schema.org/"
-     xmlns:pump-ont="https://nlp-tlp.org/ontology/pump/ont/"
      xmlns:pump_rule="https://nlp-tlp.org/ontology/pump/rule/"
      xmlns:manufacturer="https://nlp-tlp.org/ontology/manufacturer/ont/"
      xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
