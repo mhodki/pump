@@ -8,14 +8,16 @@
      xmlns:lis="http://rds.posccaesar.org/ontology/lis14/rdl/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:pump="https://nlp-tlp.org/ontology/pump/rdl/"
-     xmlns:pump_rule="https://nlp-tlp.org/ontology/pump/rule/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:shacl="http://www.w3.org/ns/shacl#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/"
+     xmlns:pump="https://nlp-tlp.org/ontology/pump/rdl/"
+     xmlns:pump_rule="https://nlp-tlp.org/ontology/pump/rule/"
      xmlns:pump_ex="https://nlp-tlp.org/ontology/pump/example/"
+     xmlns:manufacturer="https://nlp-tlp.org/ontology/manufacturer/ont/"
+     xmlns:pfluid="https://nlp-tlp.org/ontology/process_fluid/rdl/"
      xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://nlp-tlp.org/ontology/pump/example">
         <owl:versionIRI rdf:resource="https://nlp-tlp.org/ontology/pump/example/1.0"/>
@@ -74,8 +76,8 @@
     <!-- https://nlp-tlp.org/ontology/pump/example/PumpG101 -->
 
     <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpG101">
-        <rdl:hasAssembledPumpPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpG101_impeller"/>
-        <rdl:hasAssembledPumpPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpG101_volute"/>
+        <pump:hasAssembledPumpPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpG101_impeller"/>
+        <pump:hasAssembledPumpPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpG101_volute"/>
     </owl:NamedIndividual>
     
 
@@ -106,9 +108,9 @@
 
     <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/pump/example/PumpW101">
         <rdf:type rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump"/>
-        <rdl:hasAssembledPumpPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpW101_casing"/>
-        <rdl:hasAssembledPumpPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpW101_impeller"/>
-        <rdl:hasAssembledPumpPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpW101_shaft"/>
+        <pump:hasAssembledPumpPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpW101_casing"/>
+        <pump:hasAssembledPumpPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpW101_impeller"/>
+        <pump:hasAssembledPumpPart rdf:resource="https://nlp-tlp.org/ontology/pump/example/PumpW101_shaft"/>
     </owl:NamedIndividual>
     
 
