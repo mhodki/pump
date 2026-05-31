@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://nlp-tlp.org/ontology/warman/wproducts#"
+     xml:base="https://nlp-tlp.org/ontology/warman/wproducts"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:sh="http://www.w3.org/ns/shacl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pav="http://purl.org/pav/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:lis="http://rds.posccaesar.org/ontology/lis14/rdl/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:pump="https://nlp-tlp.org/ontology/pump/rdl/"
+      xmlns:pump_rule="https://www.nlp-tlp.org/ontology/pump/rule/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:warman="https://nlp-tlp.org/ontology/warman/wproducts/"
+     xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
+    <owl:Ontology rdf:about="https://nlp-tlp.org/ontology/warman/wproducts">
+        <owl:versionIRI rdf:resource="https://nlp-tlp.org/ontology/warman/wproducts/1.0"/>
+        <owl:imports rdf:resource="http://rds.posccaesar.org/ontology/lis14/ont/core/4.2"/>
+        <owl:imports rdf:resource="https://nlp-tlp.org/ontology/manufacturer/ont/core/1.0.0"/>
+        <owl:imports rdf:resource="https://nlp-tlp.org/ontology/pump/ont/core"/>
+        <owl:imports rdf:resource="https://nlp-tlp.org/ontology/pump/rule/core/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#class -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#class"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#message -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#message"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#path -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#path"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#property -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#property"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#qualifiedMinCount -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#qualifiedMinCount"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#qualifiedValueShape -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#qualifiedValueShape"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#NodeShape -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/shacl#NodeShape"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/warman/wproducts/Warman -->
+
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/warman/wproducts/Warman"/>
+    
+
+
+    <!-- https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series_Shape -->
+    <!-- This individual defines the SHACL shape for the WARMAN_AH_series pump. It specifies that any pump that is an instance of the WARMAN_AH_series must be a CentrifugalPump and must have at least one assembled part that is a VoluteCasing, at least one assembled part that is a SingleStageImpeller, at least one assembled part that is a PumpShaft, and at least one assembled part that is a RadialSplitCasing. -->
+     <!-- The SHACL shape defined by this individual can be used to validate instances of pumps in the WARMAN_AH_series to ensure that they conform to the specified structure and components. -->
+     <!-- The information in this SHACL shape is based on the WARMAn Centrifugal Slurry Pump AM Pump brochure. This is designed for continuous, heavy duty pumping or highly abrasive dense slurries-->
+     <!-- Key distinguishing design features are through bolt design of the radial split casing, fully lined casing, elastomer or alloy bolt in liners, overhang impeller design, expeller, interchangeable seal arrangement-->
+
+
+    <owl:NamedIndividual rdf:about="https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series_Shape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CentrifugalPump"/>
+        <sh:message>A pump in the WARMAN_AS_PUMP_series must be typed as a CentrifugalPump.</sh:message>
+        <sh:property>
+            <rdf:Description>
+                <sh:message>A pump in the WARMAN_AS_PUMP_series must have at least one assembled part that is a VoluteCasing.</sh:message>
+                <sh:path rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPumpPart"/>
+                <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+                <sh:qualifiedValueShape>
+                    <rdf:Description>
+                        <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpVoluteCasing"/>
+                    </rdf:Description>
+                </sh:qualifiedValueShape>
+            </rdf:Description>
+        </sh:property>
+        <sh:property>
+            <rdf:Description>
+                <sh:message>A pump in the WARMAN_AS_PUMP_series must have at least one assembled part that is a SingleStageImpeller.</sh:message>
+                <sh:path rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPumpPart"/>
+                <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+                <sh:qualifiedValueShape>
+                    <rdf:Description>
+                        <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpImpellerSingleStage"/>
+                    </rdf:Description>
+                </sh:qualifiedValueShape>
+            </rdf:Description>
+        </sh:property>
+        <sh:property>
+            <rdf:Description>
+                <sh:message>A pump in the WARMAN_AS_PUMP_series must have at least one assembled part that is a PumpShaft.</sh:message>
+                <sh:path rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPumpPart"/>
+                <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+                <sh:qualifiedValueShape>
+                    <rdf:Description>
+                        <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpShaft"/>
+                    </rdf:Description>
+                </sh:qualifiedValueShape>
+            </rdf:Description>
+        </sh:property>
+        <sh:property>
+            <rdf:Description>
+                <sh:message>A pump in the WARMAN_AS_PUMP_series must have at least one assembled part that is a RadialSplitCasing.</sh:message>
+                <sh:path rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasAssembledPumpPart"/>
+                <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+                <sh:qualifiedValueShape>
+                    <rdf:Description>
+                        <sh:class rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/CasingRadialSplit"/>
+                    </rdf:Description>
+                </sh:qualifiedValueShape>
+            </rdf:Description>
+        </sh:property>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
