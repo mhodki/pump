@@ -1,0 +1,46 @@
+@prefix lis: <http://rds.posccaesar.org/ontology/lis14/rdl/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pump: <https://nlp-tlp.org/ontology/pump/rdl/> .
+@prefix pump_ex: <https://nlp-tlp.org/ontology/pump/example/> .
+
+lis:hasAssembledPart a owl:AnnotationProperty .
+
+lis:hasAssembledPumpPart a owl:AnnotationProperty .
+
+<https://nlp-tlp.org/ontology/pump/example> a owl:Ontology ;
+    owl:imports <https://nlp-tlp.org/ontology/pump/ont/core>,
+        <https://nlp-tlp.org/ontology/pump/rule/core>,
+        <https://nlp-tlp.org/ontology/process_fluid/rdl/>,
+        <https://nlp-tlp.org/ontology/manufacturer/ont/>,
+        <https://nlp-tlp.org/ontology/warman/wproducts> ,
+        <https://nlp-tlp.org/ontology/grundfos/gproducts> ;
+    owl:versionIRI <https://nlp-tlp.org/ontology/pump/example/1.0.0> .
+
+pump_ex:PumpG101 a owl:NamedIndividual ;
+    pump:hasAssembledPumpPart pump_ex:PumpG101_impeller,
+        pump_ex:PumpG101_volute .
+
+pump_ex:PumpG102 a owl:NamedIndividual .
+
+pump_ex:PumpW101 a owl:NamedIndividual,
+        pump:CentrifugalPump ;
+    pump:hasAssembledPumpPart pump_ex:PumpW101_casing,
+        pump_ex:PumpW101_impeller,
+        pump_ex:PumpW101_shaft .
+
+pump_ex:PumpG101_impeller a owl:NamedIndividual,
+        pump:PumpImpeller .
+
+pump_ex:PumpG101_volute a owl:NamedIndividual,
+        pump:PumpVoluteCasing .
+
+pump_ex:PumpW101_casing a owl:NamedIndividual,
+        pump:CasingRadialSplit,
+        pump:PumpVoluteCasing .
+
+pump_ex:PumpW101_impeller a owl:NamedIndividual,
+        pump:PumpImpellerSingleStage .
+
+pump_ex:PumpW101_shaft a owl:NamedIndividual,
+        pump:PumpShaft .
+

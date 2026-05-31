@@ -1,0 +1,72 @@
+@prefix pfluid: <https://nlp-tlp.org/ontology/process_fluid/rdl/> .
+@prefix lis: <http://rds.posccaesar.org/ontology/lis14/rdl/> .
+@prefix pump: <https://nlp-tlp.org/ontology/pump/rdl/> .
+@prefix pump_rule: <https://nlp-tlp.org/ontology/pump/rule/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lis: <http://rds.posccaesar.org/ontology/lis14/rdl/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+<https://nlp-tlp.org/ontology/process_fluid/rdl> a owl:Ontology ;
+    owl:imports <http://rds.posccaesar.org/ontology/lis14/ont/core/4.2> ;
+    owl:versionIRI <https://nlp-tlp.org/ontology/process_fluid/rdl/1.0.0> ;
+    dcterms:title "Process Fluid Ontology" ;
+    dcterms:licence "Apache Licence 2.0" ;
+    dcterms:contributor "https://orcid.org/0000-0002-7336-3932" ;
+    dcterms:description "Common terms and properties for the process fluids"@en ;
+    rdfs:label "Process Fluid Ontology"@en .
+
+
+#################################################################
+#    Annotation properties
+################################################################# 
+
+#################################################################
+#    Object properties
+################################################################# 
+
+#################################################################
+#    Data properties
+################################################################# 
+
+#################################################################
+#    Classes
+################################################################# 
+
+
+
+pfluid:DenseAbrasiveSlurry a owl:Class ;
+    rdfs:subClassOf pfluid:Slurry .
+
+pfluid:PotableWater a owl:Class ;
+    rdfs:subClassOf pfluid:FluidMaterial .
+
+pfluid:ProcessFluid a owl:Class ;
+    rdfs:subClassOf pfluid:FluidMaterial .
+
+pfluid:ProducedWater a owl:Class ;
+    rdfs:subClassOf pfluid:FluidMaterial .
+
+pfluid:Sewage a owl:Class ;
+    rdfs:subClassOf pfluid:FluidMaterial .
+
+pfluid:hasFluidMaterialType a owl:ObjectProperty ;
+    rdfs:domain pfluid:FluidStream ;
+    rdfs:range pfluid:FluidMaterial ;
+    rdfs:subPropertyOf lis:hasMaterialPart .
+
+pfluid:FluidStream a owl:Class ;
+    rdfs:subClassOf lis:Stream .
+
+pfluid:Slurry a owl:Class ;
+    rdfs:subClassOf pfluid:FluidMaterial .
+
+pfluid:FluidMaterial a owl:Class ;
+    rdfs:subClassOf lis:Compound .
+
