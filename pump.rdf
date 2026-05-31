@@ -11,7 +11,6 @@
      xmlns:pump="https://www.nlp-tlp.org/ontology/pump/rdl/"
      xmlns:pump_rule="https://www.nlp-tlp.org/ontology/pump/rule/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:rdl1="https://nlp-tlp.org/ontology/pump/rdl/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
@@ -227,10 +226,10 @@
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute axial-flow pump terminology.</rdfs:comment>
         <rdfs:label xml:lang="en">Axial flow pump</rdfs:label>
         <skos:definition xml:lang="en">type of rotodynamic pump in which the impeller causes liquid to flow mainly parallel to the pump shaft</skos:definition>
-        <pump-ont:ISO15926_ID>7320</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/AXIAL_FLOW_PUMP</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>An &lt;AXIAL FLOW PUMP&gt; is a &lt;CENTRIFUGAL PUMP&gt; that is provided with an axial flow impeller to generate relatively low head at large flows</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>AXIAL FLOW PUMP</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>7320</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/AXIAL_FLOW_PUMP</pump:ISO15926_URI>
+        <pump:ISO15926_desc>An &lt;AXIAL FLOW PUMP&gt; is a &lt;CENTRIFUGAL PUMP&gt; that is provided with an axial flow impeller to generate relatively low head at large flows</pump:ISO15926_desc>
+        <pump:ISO15926_name>AXIAL FLOW PUMP</pump:ISO15926_name>
     </owl:Class>
     
 
@@ -373,10 +372,10 @@
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute centrifugal pump terminology, with API 610 / ISO 13709 applying centrifugal pump configuration categories.</rdfs:comment>
         <rdfs:label xml:lang="en">Centrifugal pump</rdfs:label>
         <skos:definition xml:lang="en">type of rotodynamic pump in which liquid enters the impeller near the axis of rotation and is discharged primarily by centrifugal action</skos:definition>
-        <pump-ont:ISO15926_ID>7436</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/CENTRIFUGAL_PUMP</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>A &lt;CENTRIFUGAL PUMP&gt; is an &lt;ARTEFACT&gt; and a &lt;PUMP&gt; in which centrifugal force imparted by impeller is convered to pressure in the volute casing. NOTE - Combine with either  BARE PUMP or PUMP SYSTEM,</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>CENTRIFUGAL PUMP</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>7436</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/CENTRIFUGAL_PUMP</pump:ISO15926_URI>
+        <pump:ISO15926_desc>A &lt;CENTRIFUGAL PUMP&gt; is an &lt;ARTEFACT&gt; and a &lt;PUMP&gt; in which centrifugal force imparted by impeller is convered to pressure in the volute casing. NOTE - Combine with either  BARE PUMP or PUMP SYSTEM,</pump:ISO15926_desc>
+        <pump:ISO15926_name>CENTRIFUGAL PUMP</pump:ISO15926_name>
     </owl:Class>
     
 
@@ -410,10 +409,10 @@
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute reciprocating pump and diaphragm pump terminology.</rdfs:comment>
         <rdfs:label xml:lang="en">Diaphragm pump</rdfs:label>
         <skos:definition xml:lang="en">type of reciprocating positive displacement pump that uses the cyclic flexing of a diaphragm and check valves to draw liquid into a chamber and discharge it under pressure</skos:definition>
-        <pump-ont:ISO15926_ID>7550</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/DIAPHRAGM_PUMP</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>A &lt;DIAPHRAGM PUMP&gt; is a &lt;RECIPROCATING PUMP&gt; intended to pump a liquid with a small capacity. This is done by means of thin flexible diaphragms to seal pumped fluid from leakage to atmosphere; flow rate is achieved through reciprocatory motion of the diaphragm</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>DIAPHRAGM PUMP</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>7550</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/DIAPHRAGM_PUMP</pump:ISO15926_URI>
+        <pump:ISO15926_desc>A &lt;DIAPHRAGM PUMP&gt; is a &lt;RECIPROCATING PUMP&gt; intended to pump a liquid with a small capacity. This is done by means of thin flexible diaphragms to seal pumped fluid from leakage to atmosphere; flow rate is achieved through reciprocatory motion of the diaphragm</pump:ISO15926_desc>
+        <pump:ISO15926_name>DIAPHRAGM PUMP</pump:ISO15926_name>
     </owl:Class>
     
 
@@ -435,10 +434,10 @@
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute rotary pump terminology.</rdfs:comment>
         <rdfs:label xml:lang="en">Gear pump</rdfs:label>
         <skos:definition xml:lang="en">type of rotary positive displacement pump that uses meshing gears to trap liquid between gear teeth and casing and carry it from inlet to outlet</skos:definition>
-        <pump-ont:ISO15926_ID>7691</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/GEAR_PUMP</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>A &lt;GEAR PUMP&gt; is a &lt;ROTARY PUMP&gt; that contains gear teeth within an casing or enclosure to transport liquid at relatively high back pressures</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>GEAR PUMP</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>7691</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/GEAR_PUMP</pump:ISO15926_URI>
+        <pump:ISO15926_desc>A &lt;GEAR PUMP&gt; is a &lt;ROTARY PUMP&gt; that contains gear teeth within an casing or enclosure to transport liquid at relatively high back pressures</pump:ISO15926_desc>
+        <pump:ISO15926_name>GEAR PUMP</pump:ISO15926_name>
     </owl:Class>
     
 
@@ -472,10 +471,10 @@
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute rotary pump terminology.</rdfs:comment>
         <rdfs:label xml:lang="en">Lobe pump</rdfs:label>
         <skos:definition xml:lang="en">type of rotary positive displacement pump that uses two or more timed lobed rotors to trap liquid in spaces between the lobes and casing and move it from inlet to outlet</skos:definition>
-        <pump-ont:ISO15926_ID>7825</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/LOBE_PUMP</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>A &lt;LOBE PUMP&gt; is a &lt;ROTARY PUMP&gt; intended to carry a liquid in cavities within a chamber, between meshed and timed rotor lobe surfaces, from the inlet to the outlet.</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>LOBE PUMP</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>7825</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/LOBE_PUMP</pump:ISO15926_URI>
+        <pump:ISO15926_desc>A &lt;LOBE PUMP&gt; is a &lt;ROTARY PUMP&gt; intended to carry a liquid in cavities within a chamber, between meshed and timed rotor lobe surfaces, from the inlet to the outlet.</pump:ISO15926_desc>
+        <pump:ISO15926_name>LOBE PUMP</pump:ISO15926_name>
     </owl:Class>
     
 
@@ -520,10 +519,10 @@
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute mixed-flow pump terminology.</rdfs:comment>
         <rdfs:label xml:lang="en">Mixed flow pump</rdfs:label>
         <skos:definition xml:lang="en">type of rotodynamic pump in which the impeller causes liquid to flow with both radial and axial velocity components</skos:definition>
-        <pump-ont:ISO15926_ID>7868</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/MIXED_FLOW_PUMP</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>A &lt;MIXED FLOW PUMP&gt; is a &lt;CENTRIFUGAL PUMP&gt; that uses a mixed flow pump impeller.</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>MIXED FLOW PUMP</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>7868</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/MIXED_FLOW_PUMP</pump:ISO15926_URI>
+        <pump:ISO15926_desc>A &lt;MIXED FLOW PUMP&gt; is a &lt;CENTRIFUGAL PUMP&gt; that uses a mixed flow pump impeller.</pump:ISO15926_desc>
+        <pump:ISO15926_name>MIXED FLOW PUMP</pump:ISO15926_name>
     </owl:Class>
     
 
@@ -557,10 +556,10 @@
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute reciprocating pump terminology.</rdfs:comment>
         <rdfs:label xml:lang="en">Piston pump</rdfs:label>
         <skos:definition xml:lang="en">type of reciprocating positive displacement pump operated by using the back-and-forth motion of one or more tightly sealed pistons inside a cylindrical bore to trap, move, and pressurize fluid</skos:definition>
-        <pump-ont:ISO15926_ID>7944</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/PISTON_PUMP</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>A &lt;PISTON PUMP&gt; is a &lt;RECIPROCATING PUMP&gt; that contains pistons intended to reciprocate within cylinders with the valving accomplished by rotation of the pistons and cylinders relative to the ports. The cylinders may be axially or radially disposed and arranged.</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>PISTON PUMP</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>7944</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/PISTON_PUMP</pump:ISO15926_URI>
+        <pump:ISO15926_desc>A &lt;PISTON PUMP&gt; is a &lt;RECIPROCATING PUMP&gt; that contains pistons intended to reciprocate within cylinders with the valving accomplished by rotation of the pistons and cylinders relative to the ports. The cylinders may be axially or radially disposed and arranged.</pump:ISO15926_desc>
+        <pump:ISO15926_name>PISTON PUMP</pump:ISO15926_name>
     </owl:Class>
     
 
@@ -593,10 +592,10 @@
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute pump type terminology for positive displacement pumps, with supporting ISO 15926-4 reference data categories for rotary and reciprocating pumps.</rdfs:comment>
         <rdfs:label xml:lang="en">Positive displacement pump</rdfs:label>
         <skos:definition xml:lang="en">type of pump that displaces a fixed volume of liquid by periodically enclosing it and forcing it from suction to discharge</skos:definition>
-        <pump-ont:ISO15926_ID>7967</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/POSITIVE_DISPLACEMENT_PUMP</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>A &lt;POSITIVE DISPLACEMENT PUMP&gt; is an &lt;ARTEFACT&gt; and a &lt;PUMP&gt; intended to transport liquid through the reciprocating or rotary displacement principle and with either fixed or adjustable volume flow rates. NOTE - Combine with either BARE PUMP or PUMP SYSTEM,</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>POSITIVE DISPLACEMENT PUMP</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>7967</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/POSITIVE_DISPLACEMENT_PUMP</pump:ISO15926_URI>
+        <pump:ISO15926_desc>A &lt;POSITIVE DISPLACEMENT PUMP&gt; is an &lt;ARTEFACT&gt; and a &lt;PUMP&gt; intended to transport liquid through the reciprocating or rotary displacement principle and with either fixed or adjustable volume flow rates. NOTE - Combine with either BARE PUMP or PUMP SYSTEM,</pump:ISO15926_desc>
+        <pump:ISO15926_name>POSITIVE DISPLACEMENT PUMP</pump:ISO15926_name>
     </owl:Class>
     
 
@@ -619,10 +618,10 @@
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpType"/>
         <rdfs:label xml:lang="en">Propeller pump</rdfs:label>
         <skos:definition xml:lang="en">type of axial-flow rotodynamic pump that uses a propeller-shaped impeller to move liquid mainly parallel to the pump shaft</skos:definition>
-        <pump-ont:ISO15926_ID>19720</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/PROPELLER_PUMP</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>A &lt;PROPELLER PUMP&gt; is an &lt;ARTEFACT&gt; and a &lt;PUMP&gt; that is provided with a propeller type impeller to generate relativly low head at large flows</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>PROPELLER PUMP</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>19720</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/PROPELLER_PUMP</pump:ISO15926_URI>
+        <pump:ISO15926_desc>A &lt;PROPELLER PUMP&gt; is an &lt;ARTEFACT&gt; and a &lt;PUMP&gt; that is provided with a propeller type impeller to generate relativly low head at large flows</pump:ISO15926_desc>
+        <pump:ISO15926_name>PROPELLER PUMP</pump:ISO15926_name>
     </owl:Class>
     
 
@@ -706,10 +705,10 @@
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpCasing">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpPart"/>
         <rdfs:label xml:lang="en">Pump casing</rdfs:label>
-        <pump-ont:ISO15926_ID>7989</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/PUMP_CASING</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>A &lt;PUMP CASING&gt; is a &lt;CASING&gt; and a single wall surrounding the impeller. The suction and discharge nozzles form an integral part of the casing. Typically applied for centrifugal pumps</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>PUMP CASING</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>7989</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/PUMP_CASING</pump:ISO15926_URI>
+        <pump:ISO15926_desc>A &lt;PUMP CASING&gt; is a &lt;CASING&gt; and a single wall surrounding the impeller. The suction and discharge nozzles form an integral part of the casing. Typically applied for centrifugal pumps</pump:ISO15926_desc>
+        <pump:ISO15926_name>PUMP CASING</pump:ISO15926_name>
     </owl:Class>
     
 
@@ -855,10 +854,10 @@
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpImpeller">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpPart"/>
         <rdfs:label xml:lang="en">Pump impeller</rdfs:label>
-        <pump-ont:ISO15926_ID>7991</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/PUMP_IMPELLER</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>A &lt;PUMP IMPELLER&gt; is an &lt;ARTEFACT&gt; and a &lt;IMPELLER&gt; that forms part of a rotating assembly of a pump imparting kinetic energy to the liquid being pumped</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>PUMP IMPELLER</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>7991</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/PUMP_IMPELLER</pump:ISO15926_URI>
+        <pump:ISO15926_desc>A &lt;PUMP IMPELLER&gt; is an &lt;ARTEFACT&gt; and a &lt;IMPELLER&gt; that forms part of a rotating assembly of a pump imparting kinetic energy to the liquid being pumped</pump:ISO15926_desc>
+        <pump:ISO15926_name>PUMP IMPELLER</pump:ISO15926_name>
     </owl:Class>
     
 
@@ -1001,10 +1000,10 @@
     <owl:Class rdf:about="https://nlp-tlp.org/ontology/pump/rdl/PumpShaft">
         <rdfs:subClassOf rdf:resource="https://nlp-tlp.org/ontology/pump/rdl/PumpPart"/>
         <rdfs:label xml:lang="en">Pump shaft</rdfs:label>
-        <pump-ont:ISO15926_ID>7994</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/PUMP_SHAFT</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>A &lt;PUMP SHAFT&gt; is a &lt;SHAFT&gt; of a pump that is provided with impeller(s), bearings, bushings, sealing elements etc.</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>PUMP SHAFT</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>7994</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/PUMP_SHAFT</pump:ISO15926_URI>
+        <pump:ISO15926_desc>A &lt;PUMP SHAFT&gt; is a &lt;SHAFT&gt; of a pump that is provided with impeller(s), bearings, bushings, sealing elements etc.</pump:ISO15926_desc>
+        <pump:ISO15926_name>PUMP SHAFT</pump:ISO15926_name>
     </owl:Class>
     
 
@@ -1271,10 +1270,10 @@
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute reciprocating pump terminology, with supporting ISO 15926-4 reference data item RECIPROCATING_PUMP.</rdfs:comment>
         <rdfs:label xml:lang="en">Reciprocating pump</rdfs:label>
         <skos:definition xml:lang="en">type of positive displacement pump that moves liquid by the back-and-forth motion of a piston, plunger, or diaphragm and usually uses inlet and discharge check valves</skos:definition>
-        <pump-ont:ISO15926_ID>8023</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/RECIPROCATING_PUMP</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>A &lt;RECIPROCATING PUMP&gt; is a &lt;POSITIVE DISPLACEMENT PUMP&gt; which contains a displacing element intended to be moved in a reciprocating movement to exert pressure on a fluid, typically moving within a cylindrical space.</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>RECIPROCATING PUMP</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>8023</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/RECIPROCATING_PUMP</pump:ISO15926_URI>
+        <pump:ISO15926_desc>A &lt;RECIPROCATING PUMP&gt; is a &lt;POSITIVE DISPLACEMENT PUMP&gt; which contains a displacing element intended to be moved in a reciprocating movement to exert pressure on a fluid, typically moving within a cylindrical space.</pump:ISO15926_desc>
+        <pump:ISO15926_name>RECIPROCATING PUMP</pump:ISO15926_name>
     </owl:Class>
     
 
@@ -1309,10 +1308,10 @@
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute rotary pump terminology.</rdfs:comment>
         <rdfs:label xml:lang="en">Screw pump</rdfs:label>
         <skos:definition xml:lang="en">type of rotary positive displacement pump that uses one or more screws to move liquid axially through enclosed cavities from suction to discharge</skos:definition>
-        <pump-ont:ISO15926_ID>8059</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/SCREW_PUMP</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>A &lt;SCREW PUMP&gt; is a &lt;ROTARY PUMP&gt; that contains one or more meshing screws within a casing to form liquid cavities that are transported axially from suction to discharge.</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>SCREW PUMP</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>8059</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/SCREW_PUMP</pump:ISO15926_URI>
+        <pump:ISO15926_desc>A &lt;SCREW PUMP&gt; is a &lt;ROTARY PUMP&gt; that contains one or more meshing screws within a casing to form liquid cavities that are transported axially from suction to discharge.</pump:ISO15926_desc>
+        <pump:ISO15926_name>SCREW PUMP</pump:ISO15926_name>
     </owl:Class>
     
 
@@ -1351,10 +1350,10 @@
         <rdfs:comment xml:lang="en">Source: adapted from Hydraulic Institute rotary pump terminology.</rdfs:comment>
         <rdfs:label xml:lang="en">Submersible pump</rdfs:label>
         <skos:definition xml:lang="en">type of rotodynamic pump designed to be submerged in the fluid it pumps</skos:definition>
-        <pump-ont:ISO15926_ID>8212</pump-ont:ISO15926_ID>
-        <pump-ont:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/SUBMERSIBLE_PUMP</pump-ont:ISO15926_URI>
-        <pump-ont:ISO15926_desc>A &lt;SUBMERSIBLE PUMP&gt; is an &lt;ARTEFACT&gt; and a &lt;PUMP&gt; that is capable of operating when submerged in the liquid it is intended to pump.</pump-ont:ISO15926_desc>
-        <pump-ont:ISO15926_name>SUBMERSIBLE PUMP</pump-ont:ISO15926_name>
+        <pump:ISO15926_ID>8212</pump:ISO15926_ID>
+        <pump:ISO15926_URI>https://standards.iso.org/iso/15926/-4/reference-data-item/SUBMERSIBLE_PUMP</pump:ISO15926_URI>
+        <pump:ISO15926_desc>A &lt;SUBMERSIBLE PUMP&gt; is an &lt;ARTEFACT&gt; and a &lt;PUMP&gt; that is capable of operating when submerged in the liquid it is intended to pump.</pump:ISO15926_desc>
+        <pump:ISO15926_name>SUBMERSIBLE PUMP</pump:ISO15926_name>
     </owl:Class>
     
 

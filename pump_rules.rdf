@@ -10,7 +10,6 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:pump="https://www.nlp-tlp.org/ontology/pump/rdl/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:rdl1="https://nlp-tlp.org/ontology/pump/rdl/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:pump_rule="https://www.nlp-tlp.org/ontology/pump/rule/"
