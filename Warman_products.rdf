@@ -15,7 +15,6 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/"
      xmlns:warman="https://nlp-tlp.org/ontology/warman/wproducts/"
-     xmlns:pump-ont="https://nlp-tlp.org/ontology/pump/ont/"
      xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://nlp-tlp.org/ontology/warman/wproducts">
         <owl:versionIRI rdf:resource="https://nlp-tlp.org/ontology/warman/wproducts/1.0"/>

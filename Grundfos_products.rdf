@@ -2,7 +2,6 @@
 <rdf:RDF xmlns="https://nlp-tlp.org/ontology/grundfos/gproducts#"
      xml:base="https://nlp-tlp.org/ontology/grundfos/gproducts"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ont="https://www.nlp-tlp.org/ontology/pump/ont/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:pav="http://purl.org/pav/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -10,12 +9,13 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:pump="https://nlp-tlp.org/ontology/pump/rdl/"
+     xmlns:pump_rule="https://nlp-tlp.org/ontology/pump/rule/"
+     xmlns:manufacturer="https://nlp-tlp.org/ontology/manufacturer/ont/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/"
      xmlns:grundfos="https://nlp-tlp.org/ontology/grundfos/gproducts/"
-     xmlns:pump-ont="https://nlp-tlp.org/ontology/pump/ont/"
      xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://nlp-tlp.org/ontology/grundfos/gproducts">
         <owl:versionIRI rdf:resource="https://nlp-tlp.org/ontology/grundfos/gproducts/1.0"/>

@@ -13,7 +13,6 @@
      xmlns:rdl1="https://nlp-tlp.org/ontology/pump/rdl/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:pump-ont="https://www.nlp-tlp.org/ontology/pump/ont/"
      xmlns:pump_rule="https://www.nlp-tlp.org/ontology/pump/rule/"
      xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://nlp-tlp.org/ontology/pump/rule/core">
