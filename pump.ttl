@@ -8,6 +8,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/> .
 
 <https://nlp-tlp.org/ontology/pump/ont/core> a owl:Ontology ;
     owl:imports <http://rds.posccaesar.org/ontology/lis14/ont/core/4.2> ;
@@ -39,41 +40,111 @@
     rdfs:label "ISO 15926-4 name"@en ;
     rdfs:comment "15926-4 name for this class"@en .    
 
+schema:category a owl:AnnotationProperty ;
+    rdfs:label "Category"@en .
+
+schema:manufacturer a owl:AnnotationProperty ;
+    rdfs:label "Manufacturer"@en .
+
+schema:name a owl:AnnotationProperty ;
+    rdfs:label "Name"@en .
+
+schema:catalog a owl:AnnotationProperty ;
+    rdfs:label "Catalog"@en .
+
+schema:product_model a owl:AnnotationProperty ;
+    rdfs:label "Product Model"@en ;
+    skos:example "Product Model XYZ"@en .
+
+pump:pump_product_class a owl:AnnotationProperty ;
+     rdfs:label "Pump Product Class"@en ;
+     skos:example "Pump Product Class ABC e.g. Warman AH slurry pump class"@en .
+
+pump:pump_product_class_series a owl:AnnotationProperty ;
+     rdfs:label "Pump Product Class Series"@en ;
+     skos:example "Pump Product Class Series ABC e.g. Warman AH slurry pump series"@en .     
+
+pump:pump_product_class_series_variant a owl:AnnotationProperty ;
+     rdfs:label "Pump Product Class Series Variant"@en ;
+     skos:example "Pump Product Class Series Variant XYZ e.g. Warman AH slurry pump variant 8/6 EAH"@en .
+
+
+
 
 #################################################################
-#    Object properties
+#    Object properties - pump parts
 #################################################################   
 
 <https://nlp-tlp.org/ontology/pump/rdl/hasBase> a owl:ObjectProperty ;
-    rdfs:subPropertyOf pump:hasAssembledPumpPart .
+    rdfs:subPropertyOf pump:hasAssembledPumpPart ;
+    rdfs:label "has base"@en .
 
 <https://nlp-tlp.org/ontology/pump/rdl/hasBearing> a owl:ObjectProperty ;
-    rdfs:subPropertyOf pump:hasAssembledPumpPart .
+    rdfs:subPropertyOf pump:hasAssembledPumpPart ;
+    rdfs:label "has bearing"@en .
 
 <https://nlp-tlp.org/ontology/pump/rdl/hasCasing> a owl:ObjectProperty ;
-    rdfs:subPropertyOf pump:hasAssembledPumpPart .
+    rdfs:subPropertyOf pump:hasAssembledPumpPart ;
+    rdfs:label "has casing"@en .
 
 <https://nlp-tlp.org/ontology/pump/rdl/hasCasingLiner> a owl:ObjectProperty ;
-    rdfs:subPropertyOf pump:hasAssembledPumpPart .
+    rdfs:subPropertyOf pump:hasAssembledPumpPart ;
+    rdfs:label "has casing liner"@en .
 
 <https://nlp-tlp.org/ontology/pump/rdl/hasImpeller> a owl:ObjectProperty ;
-    rdfs:subPropertyOf pump:hasAssembledPumpPart .
+    rdfs:subPropertyOf pump:hasAssembledPumpPart ;
+    rdfs:label "has impeller"@en .
 
 <https://nlp-tlp.org/ontology/pump/rdl/hasPiston> a owl:ObjectProperty ;
-    rdfs:subPropertyOf pump:hasAssembledPumpPart .
+    rdfs:subPropertyOf pump:hasAssembledPumpPart ;
+    rdfs:label "has piston"@en .
 
 <https://nlp-tlp.org/ontology/pump/rdl/hasPumpFeature> a owl:ObjectProperty ;
-    rdfs:subPropertyOf lis:hasFeature .
+    rdfs:subPropertyOf lis:hasFeature ;
+    rdfs:label "has pump feature"@en .
 
 <https://nlp-tlp.org/ontology/pump/rdl/hasShaft> a owl:ObjectProperty ;
-    rdfs:subPropertyOf pump:hasAssembledPumpPart .
+    rdfs:subPropertyOf pump:hasAssembledPumpPart ;
+    rdfs:label "has shaft"@en .
 
 <https://nlp-tlp.org/ontology/pump/rdl/hasShaftSeal> a owl:ObjectProperty ;
-    rdfs:subPropertyOf pump:hasAssembledPumpPart .
-
+    rdfs:subPropertyOf pump:hasAssembledPumpPart ;
+    rdfs:label "has shaft seal"@en .
 
 #################################################################
-#    Classes
+#    Object properties - relating to products and services
+################################################################# 
+
+pump:hasProductCatalog a owl:ObjectProperty ;
+    rdfs:subPropertyOf lis:representedIn ;
+    rdfs:domain pump:Manufacturer ;
+    rdfs:range pump:ProductCatalog .
+
+pump:hasPumpProductClass a owl:ObjectProperty ;
+    rdfs:subPropertyOf lis:representedIn ;
+    rdfs:domain pump:Manufacturer ;
+    rdfs:range pump:PumpProductClass .
+
+pump:hasPumpProductClassSeries a owl:ObjectProperty ;
+    rdfs:subPropertyOf pump:hasPumpProductClass ;
+    rdfs:domain pump:Manufacturer ;     
+    rdfs:range pump:PumpProductClassSeries .
+
+pump:hasPumpProductClassSeriesVariant a owl:ObjectProperty ;
+    rdfs:subPropertyOf pump:hasPumpProductClassSeries ;
+    rdfs:domain pump:Manufacturer ;     
+    rdfs:range pump:PumpProductClassSeries .    
+
+pump:hasClaimedSuitableService a owl:ObjectProperty ;
+    rdfs:subPropertyOf lis:representedIn ;
+    rdfs:range pump:ProductSuitabilityClaim . 
+
+pump:hasClaimSource a owl:ObjectProperty ;
+    rdfs:subPropertyOf lis:representedIn ;
+    rdfs:range pump:ProductCatalog .  
+
+#################################################################
+#    Pump RDL Classes
 #################################################################    
 
 <https://nlp-tlp.org/ontology/pump/rdl/AxialFlowImpeller> a owl:Class ;
@@ -135,7 +206,7 @@
     rdfs:comment "Source: adapted from Hydraulic Institute centrifugal pump terminology, with API 610 / ISO 13709 applying centrifugal pump configuration categories."@en ;
     rdfs:subClassOf pump:PumpType,
         pump:RotordynamicPump ;
-    skos:definition "type of rotodynamic pump in which liquid enters the impeller near the axis of rotation and is discharged primarily by centrifugal action"@en ;
+    skos:definition "type of rotordynamic pump in which liquid enters the impeller near the axis of rotation and is discharged primarily by centrifugal action"@en ;
     pump:ISO15926_ID "7436" ;
     pump:ISO15926_URI "https://standards.iso.org/iso/15926/-4/reference-data-item/CENTRIFUGAL_PUMP" ;
     pump:ISO15926_desc "A <CENTRIFUGAL PUMP> is an <ARTEFACT> and a <PUMP> in which centrifugal force imparted by impeller is convered to pressure in the volute casing. NOTE - Combine with either  BARE PUMP or PUMP SYSTEM," ;
@@ -518,14 +589,6 @@
     rdfs:subClassOf pump:MixedFlowPump ;
     skos:definition "type of rotodynamic mixed-flow pump with a vertical shaft arrangement in which the impeller imparts both radial and axial velocity components to the liquid"@en .
 
-<https://nlp-tlp.org/ontology/pump/rdl/core/PumpProductClass> a owl:Class ;
-    rdfs:label "Pump product class"@en ;
-    rdfs:subClassOf pump:Pump .
-
-<https://nlp-tlp.org/ontology/pump/rdl/PumpFeature> a owl:Class ;
-    rdfs:subClassOf lis:Feature .
-
-
 
 <https://nlp-tlp.org/ontology/pump/rdl/AxialFlowPump> a owl:Class ;
     rdfs:label "Axial flow pump"@en ;
@@ -660,4 +723,57 @@
 <https://nlp-tlp.org/ontology/pump/rdl/PumpPart> a owl:Class ;
     rdfs:label "Pump part"@en ;
     rdfs:subClassOf lis:PhysicalArtefact .
+
+
+#################################################################
+#    Pump manufacturer and product Classes
+################################################################# 
+
+
+pump:Manufacturer a owl:Class ;
+    rdfs:label "Manufacturer"@en ;
+    rdfs:subClassOf lis:Organization .
+
+pump:PumpManufacturer a owl:Class ;
+    rdfs:label "Pump Manufacturer"@en ;
+    rdfs:subClassOf pump:Manufacturer .
+
+pump:ProductCatalog a owl:Class ;
+    rdfs:label "Product Catalog"@en ;
+    rdfs:subClassOf lis:InformationObject . 
+
+pump:ProductCatalogEntry a owl:Class ;
+    rdfs:label "Product Catalog Entry"@en ;
+    rdfs:subClassOf pump:ProductCatalog .       
+
+pump:PumpingService a owl:Class ;
+    rdfs:label "Pumping Service"@en ;
+    rdfs:subClassOf lis:Activity .
+
+pump:SlurryPumpingService a owl:Class ;
+    rdfs:label "Slurry Pumping Service"@en ;
+    rdfs:subClassOf pump:PumpingService .
+
+pump:ProductSuitabilityClaim a owl:Class ;
+    rdfs:label "Product Suitability Claim"@en ;
+    rdfs:subClassOf lis:InformationObject .    
+
+<https://nlp-tlp.org/ontology/pump/rdl/PumpProductClass> a owl:Class ;
+    rdfs:label "Pump product class"@en ;
+    rdfs:subClassOf pump:Pump ;
+    skos:example "The Weir company has a Warman product class"@en .
+
+<https://nlp-tlp.org/ontology/pump/rdl/PumpProductClassSeries> a owl:Class ;
+    rdfs:label "Pump product class series"@en ;
+    rdfs:subClassOf pump:PumpProductClass ;
+    skos:example "The Warman product class series called the AH series"@en . 
+
+
+<https://nlp-tlp.org/ontology/pump/rdl/PumpProductClassSeriesVariant> a owl:Class ;
+    rdfs:label "Pump product class series variant"@en ;
+    rdfs:subClassOf pump:PumpProductClassSeries ;
+    skos:example "The Warman product class AH series variant 8/6 FAH "@en .          
+
+<https://nlp-tlp.org/ontology/pump/rdl/PumpFeature> a owl:Class ;
+    rdfs:subClassOf lis:Feature .    
 

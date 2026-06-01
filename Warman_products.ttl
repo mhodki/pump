@@ -1,6 +1,5 @@
 @prefix warman: <https://nlp-tlp.org/ontology/warman/wproducts/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix manufacturer: <https://nlp-tlp.org/ontology/manufacturer/ont/> .
 @prefix pfluid: <https://nlp-tlp.org/ontology/process_fluid/rdl/> .
 @prefix lis: <http://rds.posccaesar.org/ontology/lis14/rdl/> .
 @prefix pump: <https://nlp-tlp.org/ontology/pump/rdl/> .
@@ -32,17 +31,18 @@
 #    Annotation properties
 ################################################################# 
 
-sh:class a owl:AnnotationProperty .
+#################################################################
+#    Object properties
+################################################################# 
 
-sh:message a owl:AnnotationProperty .
+#################################################################
+#    Data properties
+################################################################# 
 
-sh:path a owl:AnnotationProperty .
+#################################################################
+#    Classes
+################################################################# 
 
-sh:property a owl:AnnotationProperty .
-
-sh:qualifiedMinCount a owl:AnnotationProperty .
-
-sh:qualifiedValueShape a owl:AnnotationProperty .
 
 
 
@@ -50,9 +50,8 @@ sh:qualifiedValueShape a owl:AnnotationProperty .
 #    SHACL shapes
 ################################################################# 
 
-warman:Warman_AH_series_Shape a owl:NamedIndividual,
-        sh:NodeShape ;
-    sh:class pump:CentrifugalPump ;
+warman:Warman_AH_series_Shape a sh:NodeShape ;
+    sh:targetclass pump:CentrifugalPump ;
     sh:message "A pump in the WARMAN_AS_PUMP_series must be typed as a CentrifugalPump." ;
     sh:property [ sh:message "A pump in the WARMAN_AS_PUMP_series must have at least one assembled part that is a RadialSplitCasing." ;
             sh:path lis:hasAssembledPumpPart ;
@@ -71,5 +70,5 @@ warman:Warman_AH_series_Shape a owl:NamedIndividual,
             sh:qualifiedMinCount 1 ;
             sh:qualifiedValueShape [ sh:class pump:PumpVoluteCasing ] ] .
 
-sh:NodeShape a owl:Class .
+
 

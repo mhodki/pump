@@ -1,0 +1,127 @@
+@prefix manufacturer: <https://nlp-tlp.org/ontology/manufacturer/ont/> .
+@prefix pump: <https://nlp-tlp.org/ontology/pump/rdl/> .
+@prefix pump_rule: <https://nlp-tlp.org/ontology/pump/rule/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lis: <http://rds.posccaesar.org/ontology/lis14/rdl/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/> .
+
+
+<https://nlp-tlp.org/ontology/manufacturer/ont/core> a owl:Ontology ;
+    owl:versionIRI <https://nlp-tlp.org/ontology/manufacturer/ont/core/1.0.0> ;
+    dcterms:title "Ontology for Manufacturers information" ;
+    dcterms:licence "Apache Licence 2.0" ;
+    dcterms:contributor "https://orcid.org/0000-0002-7336-3932" ;
+    dcterms:description "Terms and properties for manufacturer concepts"@en ;
+    rdfs:label "Manufacturer Concepts"@en .
+
+#################################################################
+#    Annotation properties
+################################################################# 
+
+schema:category a owl:AnnotationProperty ;
+    rdfs:label "Category"@en .
+
+schema:manufacturer a owl:AnnotationProperty ;
+    rdfs:label "Manufacturer"@en .
+
+schema:name a owl:AnnotationProperty ;
+    rdfs:label "Name"@en .
+
+schema:catalog a owl:AnnotationProperty ;
+    rdfs:label "Catalog"@en .
+
+schema:ProductModel a owl:AnnotationProperty ;
+    rdfs:label "Product Model"@en ;
+    skos:example "Product Model XYZ"@en .
+
+manufacturer:PumpModelSeries a owl:AnnotationProperty ;
+     rdfs:label "Pump Model Series"@en ;
+     skos:example "Pump Model Series ABC e.g. Warman AH slurry pump series"@en .
+
+manufacturer:PumpModelSeriesVariant a owl:AnnotationProperty ;
+     rdfs:label "Pump Model Series Variant"@en ;
+     skos:example "Pump Model Series Variant XYZ e.g. Warman AH slurry pump variant 8/6 EAH"@en .
+
+
+
+#################################################################
+#    Object properties
+################################################################# 
+
+manufacturer:hasProductCatalog a owl:ObjectProperty ;
+    rdfs:domain manufacturer:Manufacturer ;
+    rdfs:range manufacturer:ProductCatalog .
+
+manufacturer:hasPumpModel a owl:ObjectProperty ;
+    rdfs:domain manufacturer:Manufacturer ;
+    rdfs:range manufacturer:PumpModel .
+
+manufacturer:hasPumpModelSeries a owl:ObjectProperty ;
+    rdfs:domain manufacturer:Manufacturer ;     
+    rdfs:range manufacturer:PumpModelSeries .
+
+manufacturer:hasPumpModelVariant a owl:ObjectProperty ;
+    rdfs:domain manufacturer:Manufacturer ;     
+    rdfs:range manufacturer:PumpModelVariant .
+
+manufacturer:hasPumpModelSeriesVariant a owl:ObjectProperty ;
+    rdfs:domain manufacturer:Manufacturer ;     
+    rdfs:range manufacturer:PumpModelSeriesVariant .
+
+manufacturer:hasClaimedSuitableService a owl:ObjectProperty ;
+    rdfs:subPropertyOf lis:isAbout ;
+    rdfs:range manufacturer:ProductSuitabilityClaim . 
+
+manufacturer:hasClaimSource a owl:ObjectProperty ;
+    rdfs:subPropertyOf lis:isAbout ;
+    rdfs:range lis:InformationObject .             
+
+#################################################################
+#    Data properties
+################################################################# 
+
+#################################################################
+#    Classes
+################################################################# 
+
+manufacturer:Manufacturer a owl:Class ;
+    rdfs:label "Manufacturer"@en ;
+    rdfs:subClassOf lis:Organization .
+
+manufacturer:PumpManufacturer a owl:Class ;
+    rdfs:label "Pump Manufacturer"@en ;
+    rdfs:subClassOf manufacturer:Manufacturer .
+
+manufacturer:ProductCatalog a owl:Class ;
+    rdfs:label "Product Catalog"@en ;
+    rdfs:subClassOf lis:InformationObject . 
+
+manufacturer:ProductCatalogEntry a owl:Class ;
+    rdfs:label "Product Catalog Entry"@en ;
+    rdfs:subClassOf manufacturer:ProductCatalog .       
+
+manufacturer:PumpingService a owl:Class ;
+    rdfs:label "Pumping Service"@en ;
+    rdfs:subClassOf lis:Activity .
+
+manufacturer:SlurryPumpingService a owl:Class ;
+    rdfs:label "Slurry Pumping Service"@en ;
+    rdfs:subClassOf lis:PumpingService .
+
+manufacturer:ProductSuitabilityClaim a owl:Class ;
+    rdfs:label "Product Suitability Claim"@en ;
+    rdfs:subClassOf lis:InformationObject .    
+
+
+
+#################################################################
+#    Axioms
+################################################################# 
+

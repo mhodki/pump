@@ -31,6 +31,11 @@
 #    Object properties
 ################################################################# 
 
+pfluid:hasFluidMaterialType a owl:ObjectProperty ;
+    rdfs:domain pfluid:FluidStream ;
+    rdfs:range pfluid:FluidMaterial ;
+    rdfs:subPropertyOf lis:hasMaterialPart .
+
 #################################################################
 #    Data properties
 ################################################################# 
@@ -39,10 +44,11 @@
 #    Classes
 ################################################################# 
 
+pfluid:FluidMaterial a owl:Class ;
+    rdfs:subClassOf lis:Compound .
 
-
-pfluid:DenseAbrasiveSlurry a owl:Class ;
-    rdfs:subClassOf pfluid:Slurry .
+pfluid:FluidStream a owl:Class ;
+    rdfs:subClassOf lis:Stream .    
 
 pfluid:PotableWater a owl:Class ;
     rdfs:subClassOf pfluid:FluidMaterial .
@@ -56,17 +62,9 @@ pfluid:ProducedWater a owl:Class ;
 pfluid:Sewage a owl:Class ;
     rdfs:subClassOf pfluid:FluidMaterial .
 
-pfluid:hasFluidMaterialType a owl:ObjectProperty ;
-    rdfs:domain pfluid:FluidStream ;
-    rdfs:range pfluid:FluidMaterial ;
-    rdfs:subPropertyOf lis:hasMaterialPart .
-
-pfluid:FluidStream a owl:Class ;
-    rdfs:subClassOf lis:Stream .
-
 pfluid:Slurry a owl:Class ;
     rdfs:subClassOf pfluid:FluidMaterial .
 
-pfluid:FluidMaterial a owl:Class ;
-    rdfs:subClassOf lis:Compound .
+pfluid:DenseAbrasiveSlurry a owl:Class ;
+    rdfs:subClassOf pfluid:Slurry .
 

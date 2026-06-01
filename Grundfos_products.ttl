@@ -1,6 +1,5 @@
 @prefix grundfos: <https://nlp-tlp.org/ontology/grundfos/gproducts/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix manufacturer: <https://nlp-tlp.org/ontology/manufacturer/ont/> .
 @prefix pfluid: <https://nlp-tlp.org/ontology/process_fluid/rdl/> .
 @prefix lis: <http://rds.posccaesar.org/ontology/lis14/rdl/> .
 @prefix pump: <https://nlp-tlp.org/ontology/pump/rdl/> .
