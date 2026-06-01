@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="https://nlp-tlp.org/ontology/process_fluid/ont/core" uri="pump.ttl"/>
     <uri id="User Entered Import Resolution" name="https://nlp-tlp.org/ontology/manufacturer/ont/" uri="manufacturer.ttl"/>
     <uri id="User Entered Import Resolution" name="https://nlp-tlp.org/ontology/process_fluid/rdl/" uri="process_fluid.ttl"/>
     <uri id="Imports Wizard Entry" name="http://rds.posccaesar.org/ontology/lis14/ont/core/4.2" uri="LIS-14-for-FDIS.ttl"/>
@@ -13,12 +14,12 @@
     <uri id="User Entered Import Resolution" name="https://nlp-tlp.org/ontology/pump/ont/1.0.0" uri="pump.rdf"/>
     <uri id="Imports Wizard Entry" name="http://rds.posccaesar.org/ontology/lis14/ont/core/4.2" uri="file:/C:/Users/00040628/LocalData/GitHub/IDO/ontology/LIS-14-for-FDIS.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1780289942066" name="https://nlp-tlp.org/ontology/grundfos/gproducts" uri="rdf/Grundfos_products.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1780289942066" name="https://nlp-tlp.org/ontology/manufacturer/ont/core" uri="rdf/manufacturer.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1780289942066" name="https://nlp-tlp.org/ontology/process_fluid/rdl" uri="rdf/process_fluid.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1780289942066" name="https://nlp-tlp.org/ontology/pump/example" uri="rdf/example_pump_selection.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1780289942066" name="https://nlp-tlp.org/ontology/pump/ont/core" uri="rdf/pump.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1780289942066" name="https://nlp-tlp.org/ontology/pump/rule/core" uri="rdf/pump_rules.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1780289942066" name="https://nlp-tlp.org/ontology/warman/wproducts" uri="rdf/Warman_products.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1780328192803" name="https://nlp-tlp.org/ontology/grundfos/gproducts" uri="depracated/rdf/Grundfos_products.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1780328192803" name="https://nlp-tlp.org/ontology/manufacturer/ont/core" uri="depracated/rdf/manufacturer.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1780328192803" name="https://nlp-tlp.org/ontology/process_fluid/rdl" uri="depracated/rdf/process_fluid.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1780328192803" name="https://nlp-tlp.org/ontology/pump/example" uri="depracated/rdf/example_pump_selection.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1780328192803" name="https://nlp-tlp.org/ontology/pump/ont/core" uri="depracated/rdf/pump.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1780328192803" name="https://nlp-tlp.org/ontology/pump/rule/core" uri="depracated/rdf/pump_rules.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1780328192803" name="https://nlp-tlp.org/ontology/warman/wproducts" uri="depracated/rdf/Warman_products.rdf"/>
     </group>
 </catalog>
