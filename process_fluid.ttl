@@ -68,3 +68,5 @@ pfluid:Slurry a owl:Class ;
 pfluid:DenseAbrasiveSlurry a owl:Class ;
     rdfs:subClassOf pfluid:Slurry .
 
+pfluid:Water a owl:Class ;
+    rdfs:subClassOf pfluid:FluidMaterial .

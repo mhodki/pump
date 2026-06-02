@@ -1,18 +1,18 @@
-@prefix : <https://nlp-tlp.org/ontology/warman/wproducts/core#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix warman: <https://nlp-tlp.org/ontology/warman/wproducts/> .
+@prefix pfluid: <https://nlp-tlp.org/ontology/process_fluid/rdl/> .
 @prefix lis: <http://rds.posccaesar.org/ontology/lis14/rdl/> .
+@prefix pump: <https://nlp-tlp.org/ontology/pump/rdl/> .
+@prefix pump_rule: <https://nlp-tlp.org/ontology/pump/rule/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix pump: <https://nlp-tlp.org/ontology/pump/rdl/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix pfluid: <https://nlp-tlp.org/ontology/process_fluid/rdl/> .
-@prefix warman: <https://nlp-tlp.org/ontology/warman/wproducts/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix pump_rule: <https://nlp-tlp.org/ontology/pump/rule/> .
+
 @prefix manufacturer: <https://nlp-tlp.org/ontology/manufacturer/ont/> .
 @base <https://nlp-tlp.org/ontology/warman/wproducts/core> .
 
@@ -21,59 +21,31 @@
                                                       owl:imports <http://rds.posccaesar.org/ontology/lis14/ont/core/4.2> ,
                                                                   <https://nlp-tlp.org/ontology/pump/ont/core> ;
                                                       dcterms:contributor "https://orcid.org/0000-0002-7336-3932" ;
-                                                      dcterms:description "Examples of Warman products"@en ;
+                                                      dcterms:description "Public Warman product catalog"@en ;
                                                       dcterms:licence "Apache Licence 2.0" ;
-                                                      dcterms:title "Warman Products Ontology" ;
-                                                      rdfs:label "Warman Products Ontology"@en .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://www.w3.org/ns/shacl#class
-sh:class rdf:type owl:AnnotationProperty .
+                                                      dcterms:contributor "https://orcid.org/0000-0002-7336-3932" ;
+                                                      dcterms:title "Public Warman product catalog" ;
+                                                      rdfs:label "Public Warman product catalog"@en .
 
 
-###  http://www.w3.org/ns/shacl#message
-sh:message rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/ns/shacl#path
-sh:path rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/ns/shacl#property
-sh:property rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/ns/shacl#qualifiedMinCount
-sh:qualifiedMinCount rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/ns/shacl#qualifiedValueShape
-sh:qualifiedValueShape rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/ns/shacl#targetclass
-sh:targetclass rdf:type owl:AnnotationProperty .
 
 
 #################################################################
 #    Annotations
 #################################################################
 
-### https://nlp-tlp.org/ontology/warman/wproduct/Warman_AH_series_catalog_entry 
-warman:Warman_AH_series_catalog_entry rdfs:label "Warman AH series catalog entry"@en .
+#################################################################
+#    Object properties
+################################################################# 
 
-
-
+#################################################################
+#    Data properties
+################################################################# 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.w3.org/ns/shacl#NodeShape
-sh:NodeShape rdf:type owl:Class .
 
 
 ###  https://nlp-tlp.org/ontology/warman/wproduct/Warman_AH_series
@@ -84,12 +56,51 @@ warman:Warman_AH_series rdf:type owl:Class ;
 
 ###  https://nlp-tlp.org/ontology/warman/wproduct/Warman_AH_series_catalog_entry
 warman:Warman_AH_series_catalog_entry rdf:type owl:Class ;
-    rdfs:subClassOf pump:ProductCatalogEntry .
+    rdfs:subClassOf pump:ProductCatalogEntry ;
+    rdfs:label "Warman AH series catalog entry"@en .
 
 
 ###  https://nlp-tlp.org/ontology/warman/wproducts/core/Warman_8_6_FAH_model
 warman:Warman_8_6_FAH_model rdf:type owl:Class ;
-    rdfs:subClassOf warman:Warman_AH_series .
+    rdfs:subClassOf warman:Warman_AH_series ;
+    rdfs:label "Warman 8/6 FAH model"@en .
+
+
+
+#################################################################
+#    Named Individuals
+#################################################################
+
+
+###  https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series
+warman:Warman_AH_series
+    rdf:type owl:NamedIndividual ,
+             pump:PumpProductClassSeries ;
+    rdfs:label "Warman AH series"@en ;
+    pump:hasProductSuitabilityClaim warman:Warman_AH_series_slurry_pumping_suitability_claim .
+
+###  https://nlp-tlp.org/ontology/warman/wproducts/WarmanProductCatalog
+warman:WarmanProductCatalog rdf:type owl:NamedIndividual , 
+                                     pump:ProductCatalog ;
+    rdfs:label "Warman product catalog"@en .
+
+###  https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series_slurry_pumping_suitability_claim
+warman:Warman_AH_series_slurry_pumping_suitability_claim
+    rdf:type owl:NamedIndividual ,
+             pump:ProductSuitabilityClaim ;
+    rdfs:label "Warman AH series slurry pumping suitability claim"@en ;
+    lis:isAbout warman:Warman_AH_series ;
+    pump:hasClaimSource warman:WarmanProductCatalog ;
+    pump:claimsSuitableForService pump:SlurryPumpingService ;
+    pump:claimsSuitableForPumpedMaterial pfluid:Slurry .
+
+
+
+###  https://nlp-tlp.org/ontology/warman/wproducts/core/Pump_W101
+warman:Pump_W101 rdf:type owl:NamedIndividual ,
+                            pump:PumpProductClass ;
+    rdfs:label "Warman Pump W101"@en ;
+    pump:hasPumpModelSeries warman:Warman_AH_series .
 
 
 
@@ -97,6 +108,8 @@ warman:Warman_8_6_FAH_model rdf:type owl:Class ;
 #    SHACL
 #################################################################
 
+###  http://www.w3.org/ns/shacl#NodeShape
+sh:NodeShape rdf:type owl:Class .
 
 ###  https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series_Shape
 warman:Warman_AH_series_Shape rdf:type owl:NamedIndividual ,
@@ -129,38 +142,37 @@ warman:Warman_AH_series_Shape rdf:type owl:NamedIndividual ,
                               sh:targetclass pump:CentrifugalPump .
 
 
-
 #################################################################
-#    Named Individuals
+#    Annotation properties
 #################################################################
 
-###  https://nlp-tlp.org/ontology/pump/rdl/Warman_AH_series
-pump:Warman_AH_series rdf:type owl:NamedIndividual .
-
-###  https://nlp-tlp.org/ontology/pump/rdl/WarmanProductCatalog
-warman:WarmanProductCatalog rdf:type owl:NamedIndividual , 
-                                     pump:ProductCatalog ;
-    rdfs:label "Warman product catalog"@en .
-
-###  https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series_slurry_pumping_suitability_claim
-warman:Warman_AH_series_slurry_pumping_suitability_claim
-    rdf:type owl:NamedIndividual ,
-             pump:ProductSuitabilityClaim ;
-    rdfs:label "Warman AH series slurry pumping suitability claim"@en ;
-    lis:isAbout warman:Warman_AH_series ;
-    pump:hasClaimSource warman:WarmanProductCatalog ;
-    pump:claimsSuitableForService pump:SlurryPumpingService ;
-    pump:claimsSuitableForPumpedMaterial pfluid:Slurry .
-
-warman:Warman_AH_series
-    pump:hasProductSuitabilityClaim warman:Warman_AH_series_slurry_pumping_suitability_claim .
 
 
-###  https://nlp-tlp.org/ontology/warman/wproducts/core/Pump_W101
-warman:Pump_W101 rdf:type owl:NamedIndividual ,
-                            pump:PumpProductClass ;
-    rdfs:label "Warman Pump W101"@en ;
-    pump:hasPumpModelSeries warman:Warman_AH_series .
+###  http://www.w3.org/ns/shacl#class
+sh:class rdf:type owl:AnnotationProperty .
 
+
+###  http://www.w3.org/ns/shacl#message
+sh:message rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#path
+sh:path rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#property
+sh:property rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#qualifiedMinCount
+sh:qualifiedMinCount rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#qualifiedValueShape
+sh:qualifiedValueShape rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#targetclass
+sh:targetclass rdf:type owl:AnnotationProperty .
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

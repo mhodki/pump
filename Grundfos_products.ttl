@@ -1,40 +1,33 @@
 @prefix grundfos: <https://nlp-tlp.org/ontology/grundfos/gproducts/> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix pfluid: <https://nlp-tlp.org/ontology/process_fluid/rdl/> .
 @prefix lis: <http://rds.posccaesar.org/ontology/lis14/rdl/> .
 @prefix pump: <https://nlp-tlp.org/ontology/pump/rdl/> .
 @prefix pump_rule: <https://nlp-tlp.org/ontology/pump/rule/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix lis: <http://rds.posccaesar.org/ontology/lis14/rdl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <https://nlp-tlp.org/ontology/grundfos/gproducts/core> a owl:Ontology ;
     owl:imports <http://rds.posccaesar.org/ontology/lis14/ont/core/4.2>,
         <https://nlp-tlp.org/ontology/manufacturer/ont/core>,
-        <https://nlp-tlp.org/ontology/pump/ont/core>,
-        <https://nlp-tlp.org/ontology/pump/rule/core> ;
+        <https://nlp-tlp.org/ontology/pump/ont/core> ;
     owl:versionIRI <https://nlp-tlp.org/ontology/grundfos/gproducts/core/1.0.0> ;
-    dcterms:title "Grundfos Products Ontology" ;
-    dcterms:licence "Apache Licence 2.0" ;
+    dcterms:title "Public Grundfos product catalog" ;
     dcterms:contributor "https://orcid.org/0000-0002-7336-3932" ;
     dcterms:description "Examples of Grundfos products"@en ;
+    dcterms:licence "Apache Licence 2.0" ;
     rdfs:label "Grundfos Products Ontology"@en .
 
 #################################################################
 #    Annotation properties
 ################################################################# 
 
-
-
-#################################################################
-#    SHACL shapes
-################################################################# 
 
 #################################################################
 #    Object properties
@@ -48,16 +41,129 @@
 #    Classes
 ################################################################# 
 
+###  https://nlp-tlp.org/ontology/grundfos/gproduct/Grundfos_TPE_series
+grundfos:Grundfos_TPE_series rdf:type owl:Class ;
+    rdfs:subClassOf pump:PumpProductClassSeries ;
+    rdfs:label "Grundfos TP series"@en .
 
-grundfos:Grundfos_NB_series a owl:Class ;
-    rdfs:subClassOf pump:PumpProductClass .
+###  https://nlp-tlp.org/ontology/grundfos/gproduct/Grundfos_TPE_series_catalog_entry
+grundfos:Grundfos_TPE_series_catalog_entry rdf:type owl:Class ;
+    rdfs:subClassOf pump:ProductCatalogEntry ;
+    rdfs:label "Grundfos TPE series catalog entry"@en .   
 
-grundfos:Grundfos_NB_series2 a owl:Class ;
-    rdfs:subClassOf pump:PumpProductClass .
+###  https://nlp-tlp.org/ontology/grundfos/gproducts/Grundfos_TPE_25_90_2
+grundfos:Grundfos_TPE_25_90_2 rdf:type owl:Class ;
+    rdfs:subClassOf grundfos:Grundfos_TPE_series ;
+    rdfs:label "Grundfos TPE 25-90/2 A-O-A-BQQE-DWB"@en .     
 
-grundfos:Grundfos_NB_series_incorrect a owl:Class ;
-    rdfs:subClassOf pump:CentrifugalPump,
-        pump:PumpProductClass .
+###  https://nlp-tlp.org/ontology/grundfos/gproduct/Grundfos_APG_series
+grundfos:Grundfos_APG_series rdf:type owl:Class ;
+    rdfs:subClassOf pump:PumpProductClassSeries ;
+    rdfs:label "Grundfos APG series"@en .    
 
-grundfos:Grundfos_SP_series a owl:Class ;
-    rdfs:subClassOf pump:PumpProductClass .
+###  https://nlp-tlp.org/ontology/grundfos/gproduct/Grundfos_APG_series_catalog_entry
+grundfos:Grundfos_APG_series_catalog_entry rdf:type owl:Class ;
+    rdfs:subClassOf pump:ProductCatalogEntry ;
+    rdfs:label "Grundfos APG series catalog entry"@en .
+
+###  https://nlp-tlp.org/ontology/grundfos/gproducts/Grundfos_APG.50.48.3
+grundfos:Grundfos_APG.50.48.3 rdf:type owl:Class ;
+    rdfs:subClassOf grundfos:Grundfos_APG_series ;
+    rdfs:label "Grundfos APG 50-48/3"@en . 
+
+
+###  https://nlp-tlp.org/ontology/grundfos/gproduct/Grundfos_SP_series
+grundfos:Grundfos_SP_series rdf:type owl:Class ;
+    rdfs:subClassOf pump:PumpProductClassSeries ;
+    rdfs:label "Grundfos SP series"@en .
+
+
+###  https://nlp-tlp.org/ontology/grundfos/gproduct/Grundfos_NB_series
+grundfos:Grundfos_NB_series rdf:type owl:Class ;
+    rdfs:subClassOf pump:PumpProductClassSeries ;
+    rdfs:label "Grundfos NB series"@en .
+
+###  https://nlp-tlp.org/ontology/grundfos/gproduct/Grundfos_NB_series_catalog_entry
+grundfos:Grundfos_NB_series_catalog_entry rdf:type owl:Class ;
+    rdfs:subClassOf pump:ProductCatalogEntry ;
+    rdfs:label "Grundfos NB series catalog entry"@en .
+
+###  https://nlp-tlp.org/ontology/grundfos/gproducts/Grundfos_NB_50-315_344
+grundfos:Grundfos_NB_50-315_344 rdf:type owl:Class ;
+    rdfs:subClassOf grundfos:Grundfos_NB_series ;
+    rdfs:label "Grundfos NB 50-315/344"@en .     
+
+
+#################################################################
+#    Named Individuals
+#################################################################
+
+###  https://nlp-tlp.org/ontology/grundfos/gproducts/GrundfosProductCatalog
+grundfos:GrundfosProductCatalog rdf:type owl:NamedIndividual , 
+                                     pump:ProductCatalog ;
+    rdfs:label "Grundfos product catalog"@en .
+
+###  https://nlp-tlp.org/ontology/grundfos/gproducts/Grundfos_APG_series
+grundfos:Grundfos_APG_series
+    rdf:type owl:NamedIndividual ,
+             pump:PumpProductClassSeries ;
+    rdfs:label "Grundfos APG series"@en ;
+    pump:hasProductSuitabilityClaim grundfos:Grundfos_APG_series_sewage_pumping_suitability_claim .
+
+###  https://nlp-tlp.org/ontology/grundfos/gproducts/Grundfos_APG_series_sewage_pumping_suitability_claim
+grundfos:Grundfos_APG_series_sewage_pumping_suitability_claim
+    rdf:type owl:NamedIndividual ,
+             pump:ProductSuitabilityClaim ;
+    rdfs:label "Grundfos APG series sewage pumping suitability claim"@en ;
+    lis:isAbout grundfos:Grundfos_APG_series ;
+    pump:hasClaimSource grundfos:GrundfosProductCatalog ;
+    pump:claimsSuitableForService pump:SewagePumpingService ;
+    pump:claimsSuitableForPumpedMaterial pfluid:Sewage .
+
+###  https://nlp-tlp.org/ontology/grundfos/gproducts/Grundfos_TPE_series
+grundfos:Grundfos_TPE_series
+    rdf:type owl:NamedIndividual ,
+             pump:PumpProductClassSeries ;
+    rdfs:label "Grundfos TPE series"@en ;
+    pump:hasProductSuitabilityClaim grundfos:Grundfos_TPE_series_water_pumping_suitability_claim .
+
+###  https://nlp-tlp.org/ontology/grundfos/gproducts/Grundfos_TPE_series_water_pumping_suitability_claim
+grundfos:Grundfos_TPE_series_water_pumping_suitability_claim
+    rdf:type owl:NamedIndividual ,
+             pump:ProductSuitabilityClaim ;
+    rdfs:label "Grundfos TPE series water pumping suitability claim"@en ;
+    lis:isAbout grundfos:Grundfos_TPE_series ;
+    pump:hasClaimSource grundfos:GrundfosProductCatalog ;
+    pump:claimsSuitableForService pump:WaterPumpingService ;
+    pump:claimsSuitableForPumpedMaterial pfluid:Water .
+
+###  https://nlp-tlp.org/ontology/grundfos/gproducts/Grundfos_NB_series
+grundfos:Grundfos_NB_series
+    rdf:type owl:NamedIndividual ,
+             pump:PumpProductClassSeries ;
+    rdfs:label "Grundfos NB series"@en ;
+    pump:hasProductSuitabilityClaim grundfos:Grundfos_NB_series_catalog_entry .
+
+###  https://nlp-tlp.org/ontology/grundfos/gproducts/Grundfos_NB_series_water_pumping_suitability_claim
+grundfos:Grundfos_NB_series_water_pumping_suitability_claim
+    rdf:type owl:NamedIndividual ,
+             pump:ProductSuitabilityClaim ;
+    rdfs:label "Grundfos NB series water pumping suitability claim"@en ;
+    lis:isAbout grundfos:Grundfos_NB_series ;
+    pump:hasClaimSource grundfos:GrundfosProductCatalog ;
+    pump:claimsSuitableForService pump:WaterPumpingService ;
+    pump:claimsSuitableForPumpedMaterial pfluid:Water .
+
+###  https://nlp-tlp.org/ontology/grundfos/gproducts/core/Pump_G101
+grundfos:Pump_G101 rdf:type owl:NamedIndividual ,
+                            pump:PumpProductClass ;
+    rdfs:label "Grundfos Pump G101"@en ;
+    pump:hasPumpModelSeries grundfos:Grundfos_APG_series .
+
+
+
+
+#################################################################
+#    SHACL shapes
+################################################################# 
+
