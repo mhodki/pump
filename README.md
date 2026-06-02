@@ -1,10 +1,19 @@
-# Pump Equipment Ontology
+# Pump Reference Data Library (RDL)
 
 ## Overview
 
-This repository contains an **OWL 2 Web Ontology Language** (RDF/XML serialization) for pump equipment classification and properties. The ontology provides structured definitions and standardized terminology for pump types, components, and technical properties used in industrial applications.
-
 Ontologies in this repository enable semantic representation of pump systems and equipment configurations.
+
+This repository contains an **OWL 2 Web Ontology Language** (RDF/XML serialization) for pump classification, pump parts and terms relating to pump manufacturer's classification of their products. The ontology provides structured definitions and standardized terminology for pumps used in industrial applications.
+
+The pump.ttl file imports the LIS-14-FOR_FDIS.ttl (ISO FDIS 23726-3) and a process_fluid.ttl module for describing types of process fluids. Both are contained in this repo. 
+
+Disjoint axioms and class restrictions are in a separate file pump_rules.ttl. 
+
+There are two Pump Product files containing examples of products from Warman and Grundfos pump manufacturer's web sites. The hope is that Pump manufacturers could make the product data they currently share on web sites and in paper catalogs available in .ttl format using the same shared, open pump.ttl file presented here.
+
+There are two python files containing SPARQL code allowing a user to run an example queries to find which pumps in the catalog claim to pump a specific process fluid, e.g which are suitable for sewage, or slurry. These are small illustrative examples only. 
+
 
 ## Primary Files
 
@@ -12,16 +21,28 @@ Ontologies in this repository enable semantic representation of pump systems and
 The main ontology file containing:
 
 - **Pump Type Classifications**: Rotodynamic and positive displacement pump types including:
-  - Centrifugal pumps (axial flow, mixed flow, propeller variants)
+- - centrifugal, diaphragm, gear, metering, piston, screw etc.  
+  
+- **Pump with specific motion classifications**:
+- - Rotordynamic pumps (centrifugal, axial flow, mixed flow)
   - Positive displacement pumps:
-    - Reciprocating: piston, diaphragm
+    - Reciprocating: piston, diaphragm 
     - Rotary: gear, lobe, screw
+
+- **Pump with specific stages**:
+- - Pump with single-stage, and multi-stage.
   
 - **Pump Components**: Physical parts including:
   - Impeller (with design variants: open, closed, semi-open)
   - Casing (with split configurations: axial, radial)
   - Shaft and sealing elements
   - Bearings and accessory components
+
+- **Pump features**: For pump parts with specific features:
+- - Volute casing, concentric casing
+- - Casing with end suction, side suction, top discharge
+ 
+- **Information object**: Classes relating to product catalog and product suitability claims
   
 - **Annotation Properties** for standardized metadata:
   - `ISO15926_name`: ISO 15926-4 reference name
@@ -35,34 +56,35 @@ The main ontology file containing:
 
 | Namespace | Purpose |
 |-----------|---------|
-| `https://www.nlp-tlp.org/ontology/pump/ont/` | Main ontology URI (pump annotation properties) |
+| `https://www.nlp-tlp.org/ontology/pump/ont/core` | Main ontology URI (pump annotation properties) |
 | `https://www.nlp-tlp.org/ontology/pump/rdl/` | Pump concept definitions (classes) |
 | `http://rds.posccaesar.org/ontology/lis14/ont/core/4.2` | Imported LIS-14 base ontology (equipment reference library) |
+| `https://nlp-tlp.org/ontology/pump/rule/core` | For disjoint axioms, class and object property restrictions |
+| `https://nlp-tlp.org/ontology/grundfos/gproducts/core`| For public Grundfos pump catalog information |
+| `https://nlp-tlp.org/ontology/warman/wproducts/core`| For public Warman pump catalog information |
+| `https://nlp-tlp.org/ontology/pump/example`| For pump instance data such as might be used in an actual plant |
 
 ## Key Features
 
 ### Standardized Classification
 - Aligns with **Hydraulic Institute (HI)** pump terminology standards
 - Cross-references **ISO 15926-4** pump equipment definitions
-- Supports **API 610** and **ISO 13709** centrifugal pump configurations
 
 ### Semantic Relationships
 - Hierarchical class definitions with `rdfs:subClassOf`
 - Disjoint class relationships for mutually exclusive pump types
 - Definition metadata via `skos:definition` and `rdfs:comment`
+- Domain and range properties
+- Class restrictions
 
 ### ISO 15926 Integration
-14 primary pump classes annotated with ISO 15926-4 reference data:
+Only 14 primary pump classes are annotated with ISO 15926-4 reference data:
 - CentrifugalPump, AxialFlowPump, MixedFlowPump
 - PistonPump, GearPump, LobePump, DiaphragmPump
 - ReciprocatingPump, PositiveDisplacementPump
 - PropellerPump, ScrewPump
 - PumpImpeller, PumpCasing, PumpShaft
-
-### Extensibility
-- Annotation properties for ISO and industry standards
-- SKOS vocabulary support for terminology mapping
-- OWL disjointness constraints for pump type exclusivity
+  The other 14 classes and (>60) parts do not appear in the ISO 15926-4 reference data
 
 ## Getting Started
 
@@ -71,11 +93,13 @@ The main ontology file containing:
 - XML catalog support for local resolution (optional, for offline use)
 
 ### To Run
-1. Open Protégé or your OWL ontology editor
-2. Load `pump.rdf` (or `Pump_model_examples.rdf` for example instances)
-3. The catalog file (`catalog-v001.xml`) enables automatic resolution of imported LIS-14 and pump ontology references
-4. Alternatively, open `grundfos_example.rdf` for a complete pump system example
-   - This file imports both `pump.rdf` and LIS-14 ontologies
+1. Clone the repo
+2. Open Protégé or your OWL ontology editor
+3. Load `pump.rdf` to view the pump.rdf file.
+4. Load `pump_rules.rdf` to view the rules. It imports `pump.rdf`
+5. If you want to see an example of a pump product, open either the Warman or Grundfos product.ttl files. They should import the necessary files.
+6. To see a SHACL example, open and run the query_grundfos.py or query_warman.py files. These are toy examples right now to demonstrate how to find which pump models are suitable for specific process fluid types.
+   
 
 ### Viewing the Ontology
 - **Classes**: Browse pump types and components in the Classes tab
@@ -97,10 +121,7 @@ The main ontology file containing:
 ## Development Notes
 
 ### Recent Changes
-- Ontology namespace migrated from `http://www.semanticweb.org/...` to `https://www.nlp-tlp.org/ontology/pump/ont/`
-- ISO 15926-4 annotations systematically added to 14 primary pump classes
-- XML namespace declaration corrected in pump_2.rdf (`xmnls:pump` → `xmlns:pump`)
-- Pump_model_examples.rdf identified for namespace alignment with main ontology
+- See commits in this GitHub
 
 ### Quality Assurance
 - All RDF/XML files validated for well-formed XML
