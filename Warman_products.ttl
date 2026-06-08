@@ -50,7 +50,7 @@
 
 ###  https://nlp-tlp.org/ontology/warman/wproduct/Warman_AH_series
 warman:Warman_AH_series rdf:type owl:Class ;
-    rdfs:subClassOf pump:PumpProductClassSeries ;
+    rdfs:subClassOf pump:PumpByProductClassSeries ;
     rdfs:label "Warman AH series"@en .
 
 
@@ -75,7 +75,7 @@ warman:Warman_8_6_FAH_model rdf:type owl:Class ;
 ###  https://nlp-tlp.org/ontology/warman/wproducts/Warman_AH_series
 warman:Warman_AH_series
     rdf:type owl:NamedIndividual ,
-             pump:PumpProductClassSeries ;
+             pump:PumpByProductClassSeries ;
     rdfs:label "Warman AH series"@en ;
     pump:hasProductSuitabilityClaim warman:Warman_AH_series_slurry_pumping_suitability_claim .
 
@@ -98,7 +98,7 @@ warman:Warman_AH_series_slurry_pumping_suitability_claim
 
 ###  https://nlp-tlp.org/ontology/warman/wproducts/core/Pump_W101
 warman:Pump_W101 rdf:type owl:NamedIndividual ,
-                            pump:PumpProductClass ;
+                            pump:PumpByProductClass ;
     rdfs:label "Warman Pump W101"@en ;
     pump:hasPumpModelSeries warman:Warman_AH_series .
 

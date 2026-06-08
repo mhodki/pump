@@ -130,28 +130,28 @@ pump:hasProductCatalog a owl:ObjectProperty ;
     rdfs:domain pump:Manufacturer ;
     rdfs:range pump:ProductCatalog .
 
-pump:hasPumpProductClass a owl:ObjectProperty ;
+pump:hasPumpByProductClass a owl:ObjectProperty ;
     rdfs:label "has pump product class"@en ;
     rdfs:subPropertyOf lis:representedIn ;
     rdfs:domain pump:Manufacturer ;
-    rdfs:range pump:PumpProductClass .
+    rdfs:range pump:PumpByProductClass .
 
-pump:hasPumpProductClassSeries a owl:ObjectProperty ;
+pump:hasPumpByProductClassSeries a owl:ObjectProperty ;
     rdfs:label "has pump product class series"@en ;
-    rdfs:subPropertyOf pump:hasPumpProductClass ;
+    rdfs:subPropertyOf pump:hasPumpByProductClass ;
     rdfs:domain pump:Manufacturer ;     
-    rdfs:range pump:PumpProductClassSeries .
+    rdfs:range pump:PumpByProductClassSeries .
 
-pump:hasPumpProductClassSeriesVariant a owl:ObjectProperty ;
+pump:hasPumpByProductClassSeriesVariant a owl:ObjectProperty ;
     rdfs:label "has pump product class series variant"@en ;
-    rdfs:subPropertyOf pump:hasPumpProductClassSeries ;
+    rdfs:subPropertyOf pump:hasPumpByProductClassSeries ;
     rdfs:domain pump:Manufacturer ;     
-    rdfs:range pump:PumpProductClassSeries .    
+    rdfs:range pump:PumpByProductClassSeries .    
 
 pump:hasProductSuitabilityClaim a owl:ObjectProperty ;
     rdfs:label "has product suitability claim"@en ;
     rdfs:subPropertyOf lis:representedIn ;
-    rdfs:domain pump:PumpProductClass ;
+    rdfs:domain pump:PumpByProductClass ;
     rdfs:range pump:ProductSuitabilityClaim . 
 
 pump:claimsSuitableForService a owl:ObjectProperty ;
@@ -179,16 +179,16 @@ pump:Pump a owl:Class ;
     rdfs:subClassOf lis:PhysicalArtefact ;
     owl:disjointWith pump:PumpPart .
 
-pump:PumpImpellerDesign a owl:Class ;
-    rdfs:label "Pump impeller design"@en ;
+pump:PumpByImpellerDesign a owl:Class ;
+    rdfs:label "Pump by impeller design"@en ;
     rdfs:subClassOf pump:Pump .
 
 pump:PumpFeature a owl:Class ;
     rdfs:label "Pump feature"@en ;
     rdfs:subClassOf lis:Feature .     
 
-pump:PumpType a owl:Class ;
-    rdfs:label "Pump type"@en ;
+pump:PumpByType a owl:Class ;
+    rdfs:label "Pump by type"@en ;
     rdfs:subClassOf pump:Pump .
 
 pump:PumpPart a owl:Class ;
@@ -210,7 +210,7 @@ pump:PumpWithSpecifiedStages a owl:Class ;
 pump:CentrifugalPump a owl:Class ;
     rdfs:label "Centrifugal pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute centrifugal pump terminology, with API 610 / ISO 13709 applying centrifugal pump configuration categories."@en ;
-    rdfs:subClassOf pump:PumpType,
+    rdfs:subClassOf pump:PumpByType,
         pump:RotordynamicPump ;
     skos:definition "type of rotordynamic pump in which liquid enters the impeller near the axis of rotation and is discharged primarily by centrifugal action"@en ;
     pump:ISO15926_ID "7436" ;
@@ -221,7 +221,7 @@ pump:CentrifugalPump a owl:Class ;
 pump:CircumferentialPistonPump a owl:Class ;
     rdfs:label "Circumferential piston pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute rotary pump terminology."@en ;
-    rdfs:subClassOf pump:PumpType,
+    rdfs:subClassOf pump:PumpByType,
         pump:RotaryPDPump ;
     skos:definition "type of rotary positive displacement pump that uses timed circumferential pistons or rotors to form expanding and contracting cavities that transfer fluid from inlet to outlet"@en .
 
@@ -230,7 +230,7 @@ pump:CircumferentialPistonPump a owl:Class ;
 pump:DiaphragmPump a owl:Class ;
     rdfs:label "Diaphragm pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute reciprocating pump and diaphragm pump terminology."@en ;
-    rdfs:subClassOf pump:PumpType,
+    rdfs:subClassOf pump:PumpByType,
         pump:ReciprocatingPump ;
     skos:definition "type of reciprocating positive displacement pump that uses the cyclic flexing of a diaphragm and check valves to draw liquid into a chamber and discharge it under pressure"@en ;
     pump:ISO15926_ID "7550" ;
@@ -243,7 +243,7 @@ pump:DiaphragmPump a owl:Class ;
 pump:GearPump a owl:Class ;
     rdfs:label "Gear pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute rotary pump terminology."@en ;
-    rdfs:subClassOf pump:PumpType,
+    rdfs:subClassOf pump:PumpByType,
         pump:RotaryPDPump ;
     skos:definition "type of rotary positive displacement pump that uses meshing gears to trap liquid between gear teeth and casing and carry it from inlet to outlet"@en ;
     pump:ISO15926_ID "7691" ;
@@ -257,7 +257,7 @@ pump:HorizontalMixedFlowPump a owl:Class ;
     rdfs:label "Horizontal mixed flow pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute mixed-flow pump terminology and API 610 / ISO 13709 configuration terminology."@en ;
     rdfs:subClassOf pump:MixedFlowPump,
-        pump:PumpType ;
+        pump:PumpByType ;
     skos:definition "type of rotodynamic mixed-flow pump with a horizontal shaft arrangement in which the impeller imparts both radial and axial velocity components to the liquid"@en .
 
 
@@ -265,7 +265,7 @@ pump:HorizontalMixedFlowPump a owl:Class ;
 pump:LobePump a owl:Class ;
     rdfs:label "Lobe pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute rotary pump terminology."@en ;
-    rdfs:subClassOf pump:PumpType,
+    rdfs:subClassOf pump:PumpByType,
         pump:RotaryPDPump ;
     skos:definition "type of rotary positive displacement pump that uses two or more timed lobed rotors to trap liquid in spaces between the lobes and casing and move it from inlet to outlet"@en ;
     pump:ISO15926_ID "7825" ;
@@ -276,7 +276,7 @@ pump:LobePump a owl:Class ;
 pump:MeteringPump a owl:Class ;
     rdfs:label "Metering pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute controlled-volume metering pump terminology."@en ;
-    rdfs:subClassOf pump:PumpType,
+    rdfs:subClassOf pump:PumpByType,
         pump:ReciprocatingPump ;
     skos:definition "type of controlled-volume positive displacement pump designed to deliver an accurately adjustable and repeatable rate of flow"@en .
 
@@ -289,14 +289,14 @@ pump:MixedAxialFlow a owl:Class ;
 pump:PeristalticPump a owl:Class ;
     rdfs:label "Peristaltic pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute positive displacement pump terminology."@en ;
-    rdfs:subClassOf pump:PumpType,
+    rdfs:subClassOf pump:PumpByType,
         pump:RotaryPDPump ;
     skos:definition "type of positive displacement pump that moves fluid by the progressive compression and release of a flexible tube or hose by rollers or shoes"@en .
 
 pump:PistonPump a owl:Class ;
     rdfs:label "Piston pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute reciprocating pump terminology."@en ;
-    rdfs:subClassOf pump:PumpType,
+    rdfs:subClassOf pump:PumpByType,
         pump:ReciprocatingPump ;
     skos:definition "type of reciprocating positive displacement pump operated by using the back-and-forth motion of one or more tightly sealed pistons inside a cylindrical bore to trap, move, and pressurize fluid"@en ;
     pump:ISO15926_ID "7944" ;
@@ -309,20 +309,20 @@ pump:PistonPump a owl:Class ;
 pump:PlungerPump a owl:Class ;
     rdfs:label "Plunger pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute reciprocating pump terminology."@en ;
-    rdfs:subClassOf pump:PumpType,
+    rdfs:subClassOf pump:PumpByType,
         pump:ReciprocatingPump ;
     skos:definition "type of reciprocating positive displacement pump operated by using the back-and-forth motion of one or more plungers through packing to displace and pressurize liquid in a cylinder"@en .
 
 pump:ProgressingCavityPump a owl:Class ;
     rdfs:label "Progressing cavity pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute rotary pump terminology."@en ;
-    rdfs:subClassOf pump:PumpType,
+    rdfs:subClassOf pump:PumpByType,
         pump:RotaryPDPump ;
     skos:definition "type of rotary positive displacement pump that uses an eccentrically rotating helical rotor inside a stator to form sealed cavities that progress from suction to discharge"@en .
 
 pump:PropellerPump a owl:Class ;
     rdfs:label "Propeller pump"@en ;
-    rdfs:subClassOf pump:PumpType ;
+    rdfs:subClassOf pump:PumpByType ;
     skos:definition "type of axial-flow rotodynamic pump that uses a propeller-shaped impeller to move liquid mainly parallel to the pump shaft"@en ;
     pump:ISO15926_ID "19720" ;
     pump:ISO15926_URI "https://standards.iso.org/iso/15926/-4/reference-data-item/PROPELLER_PUMP" ;
@@ -348,7 +348,7 @@ pump:ReciprocatingPump a owl:Class ;
 pump:ScrewPump a owl:Class ;
     rdfs:label "Screw pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute rotary pump terminology."@en ;
-    rdfs:subClassOf pump:PumpType,
+    rdfs:subClassOf pump:PumpByType,
         pump:RotaryPDPump ;
     skos:definition "type of rotary positive displacement pump that uses one or more screws to move liquid axially through enclosed cavities from suction to discharge"@en ;
     pump:ISO15926_ID "8059" ;
@@ -359,7 +359,7 @@ pump:ScrewPump a owl:Class ;
 pump:SubmersiblePump a owl:Class ;
     rdfs:label "Submersible pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute rotary pump terminology."@en ;
-    rdfs:subClassOf pump:PumpType ;
+    rdfs:subClassOf pump:PumpByType ;
     skos:definition "type of rotodynamic pump designed to be submerged in the fluid it pumps"@en ;
     pump:ISO15926_ID "8212" ;
     pump:ISO15926_URI "https://standards.iso.org/iso/15926/-4/reference-data-item/SUBMERSIBLE_PUMP" ;
@@ -369,7 +369,7 @@ pump:SubmersiblePump a owl:Class ;
 pump:VanePump a owl:Class ;
     rdfs:label "Vane pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute rotary pump terminology."@en ;
-    rdfs:subClassOf pump:PumpType,
+    rdfs:subClassOf pump:PumpByType,
         pump:RotaryPDPump ;
     skos:definition "type of rotary positive displacement pump that uses sliding or flexible vanes in a rotor to form variable-volume chambers that draw in and discharge liquid"@en .
 
@@ -387,7 +387,7 @@ pump:VerticalMixedFlowPump a owl:Class ;
 pump:AxialFlowPump a owl:Class ;
     rdfs:label "Axial flow pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute axial-flow pump terminology."@en ;
-    rdfs:subClassOf pump:PumpType,
+    rdfs:subClassOf pump:PumpByType,
         pump:RotordynamicPump ;
     skos:definition "type of rotodynamic pump in which the impeller causes liquid to flow mainly parallel to the pump shaft"@en ;
     pump:ISO15926_ID "7320" ;
@@ -398,7 +398,7 @@ pump:AxialFlowPump a owl:Class ;
 pump:MixedFlowPump a owl:Class ;
     rdfs:label "Mixed flow pump"@en ;
     rdfs:comment "Source: adapted from Hydraulic Institute mixed-flow pump terminology."@en ;
-    rdfs:subClassOf pump:PumpType,
+    rdfs:subClassOf pump:PumpByType,
         pump:RotordynamicPump ;
     skos:definition "type of rotodynamic pump in which the impeller causes liquid to flow with both radial and axial velocity components"@en ;
     pump:ISO15926_ID "7868" ;
@@ -465,43 +465,43 @@ pump:PumpWithMultiStage a owl:Class ;
 
 pump:AxialFlowImpeller a owl:Class ;
     rdfs:label "Axial flow impeller"@en ;
-    rdfs:subClassOf pump:PumpImpellerDesign .
+    rdfs:subClassOf pump:PumpByImpellerDesign .
 
 pump:ClosedImpeller a owl:Class ;
     rdfs:label "Closed impeller"@en ;
-    rdfs:subClassOf pump:PumpImpellerDesign .    
+    rdfs:subClassOf pump:PumpByImpellerDesign .    
 
 pump:DoubleSuctionImpeller a owl:Class ;
     rdfs:label "Double suction impeller"@en ;
-    rdfs:subClassOf pump:PumpImpellerDesign .    
+    rdfs:subClassOf pump:PumpByImpellerDesign .    
 
 pump:InducedVortexImpeller a owl:Class ;
     rdfs:label "Induced vortex impeller"@en ;
-    rdfs:subClassOf pump:PumpImpellerDesign .  
+    rdfs:subClassOf pump:PumpByImpellerDesign .  
 
 pump:MixedFlowImpeller a owl:Class ;
     rdfs:label "Mixed flow impeller"@en ;
-    rdfs:subClassOf pump:PumpImpellerDesign .
+    rdfs:subClassOf pump:PumpByImpellerDesign .
 
 pump:OpenImpeller a owl:Class ;
     rdfs:label "Open impeller"@en ;
-    rdfs:subClassOf pump:PumpImpellerDesign .
+    rdfs:subClassOf pump:PumpByImpellerDesign .
 
 pump:PlainVaneImpeller a owl:Class ;
     rdfs:label "Plain vane impeller"@en ;
-    rdfs:subClassOf pump:PumpImpellerDesign . 
+    rdfs:subClassOf pump:PumpByImpellerDesign . 
 
 pump:ScrewVaneImpeller a owl:Class ;
     rdfs:label "Screw vane impeller"@en ;
-    rdfs:subClassOf pump:PumpImpellerDesign .
+    rdfs:subClassOf pump:PumpByImpellerDesign .
 
 pump:SemiOpenImpeller a owl:Class ;
     rdfs:label "Semi open impeller"@en ;
-    rdfs:subClassOf pump:PumpImpellerDesign .
+    rdfs:subClassOf pump:PumpByImpellerDesign .
 
 pump:SingleSuctionImpeller a owl:Class ;
     rdfs:label "Single suction impeller"@en ;
-    rdfs:subClassOf pump:PumpImpellerDesign .
+    rdfs:subClassOf pump:PumpByImpellerDesign .
    
 
 #################################################################
@@ -840,14 +840,14 @@ pump:ProductSuitabilityClaim a owl:Class ;
     rdfs:label "Product Suitability Claim"@en ;
     rdfs:subClassOf lis:InformationObject .    
 
-pump:PumpProductClass a owl:Class ;
-    rdfs:label "Pump product class"@en ;
+pump:PumpByProductClass a owl:Class ;
+    rdfs:label "Pump by product class"@en ;
     rdfs:subClassOf pump:Pump ;
     skos:example "The Weir company has a Warman product class"@en .
 
-pump:PumpProductClassSeries a owl:Class ;
-    rdfs:label "Pump product class series"@en ;
-    rdfs:subClassOf pump:PumpProductClass ;
+pump:PumpByProductClassSeries a owl:Class ;
+    rdfs:label "Pump by product class series"@en ;
+    rdfs:subClassOf pump:PumpByProductClass ;
     skos:example "The Warman product class series called the AH series"@en . 
 
    

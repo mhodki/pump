@@ -31,7 +31,7 @@
 #    Object properties
 ################################################################# 
 
-pfluid:hasFluidMaterialType a owl:ObjectProperty ;
+pfluid:hasFluidMaterialByType a owl:ObjectProperty ;
     rdfs:domain pfluid:FluidStream ;
     rdfs:range pfluid:FluidMaterial ;
     rdfs:subPropertyOf lis:hasMaterialPart .
