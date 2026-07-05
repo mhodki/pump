@@ -463,44 +463,44 @@ pump:PumpWithMultiStage a owl:Class ;
 #    Pump impeller design classes
 #################################################################   
 
-pump:AxialFlowImpeller a owl:Class ;
-    rdfs:label "Axial flow impeller"@en ;
+pump:PumpWithAxialFlowImpeller a owl:Class ;
+    rdfs:label "Pump with axial flow impeller"@en ;
     rdfs:subClassOf pump:PumpByImpellerDesign .
 
-pump:ClosedImpeller a owl:Class ;
-    rdfs:label "Closed impeller"@en ;
+pump:PumpWithClosedImpeller a owl:Class ;
+    rdfs:label "Pump with closed impeller"@en ;
     rdfs:subClassOf pump:PumpByImpellerDesign .    
 
-pump:DoubleSuctionImpeller a owl:Class ;
-    rdfs:label "Double suction impeller"@en ;
+pump:PumpWithDoubleSuctionImpeller a owl:Class ;
+    rdfs:label "Pump with double suction impeller"@en ;
     rdfs:subClassOf pump:PumpByImpellerDesign .    
 
-pump:InducedVortexImpeller a owl:Class ;
-    rdfs:label "Induced vortex impeller"@en ;
+pump:PumpWithInducedVortexImpeller a owl:Class ;
+    rdfs:label "Pump with induced vortex impeller"@en ;
     rdfs:subClassOf pump:PumpByImpellerDesign .  
 
-pump:MixedFlowImpeller a owl:Class ;
-    rdfs:label "Mixed flow impeller"@en ;
+pump:PumpWithMixedFlowImpeller a owl:Class ;
+    rdfs:label "Pump with mixed flow impeller"@en ;
     rdfs:subClassOf pump:PumpByImpellerDesign .
 
-pump:OpenImpeller a owl:Class ;
-    rdfs:label "Open impeller"@en ;
+pump:PumpWithOpenImpeller a owl:Class ;
+    rdfs:label "Pump with open impeller"@en ;
     rdfs:subClassOf pump:PumpByImpellerDesign .
 
-pump:PlainVaneImpeller a owl:Class ;
-    rdfs:label "Plain vane impeller"@en ;
-    rdfs:subClassOf pump:PumpByImpellerDesign . 
-
-pump:ScrewVaneImpeller a owl:Class ;
-    rdfs:label "Screw vane impeller"@en ;
+pump:PumpWithPlainVaneImpeller a owl:Class ;
+    rdfs:label "Pump with plain vane impeller"@en ;
     rdfs:subClassOf pump:PumpByImpellerDesign .
 
-pump:SemiOpenImpeller a owl:Class ;
-    rdfs:label "Semi open impeller"@en ;
+pump:PumpWithScrewVaneImpeller a owl:Class ;
+    rdfs:label "Pump with screw vane impeller"@en ;
     rdfs:subClassOf pump:PumpByImpellerDesign .
 
-pump:SingleSuctionImpeller a owl:Class ;
-    rdfs:label "Single suction impeller"@en ;
+pump:PumpWithSemiOpenImpeller a owl:Class ;
+    rdfs:label "Pump with semi open impeller"@en ;
+    rdfs:subClassOf pump:PumpByImpellerDesign .
+
+pump:PumpWithSingleSuctionImpeller a owl:Class ;
+    rdfs:label "Pump with single suction impeller"@en ;
     rdfs:subClassOf pump:PumpByImpellerDesign .
    
 
@@ -508,43 +508,56 @@ pump:SingleSuctionImpeller a owl:Class ;
 #    Pump feature classes
 #################################################################          
 
-pump:CasingConcentric a owl:Class ;
-    rdfs:subClassOf pump:PumpCasingFeature .
+pump:PumpWithCasingConcentric a owl:Class ;
+    rdfs:label "Pump with concentric casing "@en ;
+    rdfs:subClassOf pump:PumpWithCasingFeature .
 
-pump:CasingDiffuser a owl:Class ;
-    rdfs:subClassOf pump:PumpCasingFeature .
+pump:PumpWithCasingDiffuser a owl:Class ;
+    rdfs:label "Pump with diffuser casing "@en ;
+    rdfs:subClassOf pump:PumpWithCasingFeature .
 
-pump:CasingSinglePiece a owl:Class ;
-    rdfs:subClassOf pump:PumpCasingFeature .
+pump:PumpWithCasingSinglePiece a owl:Class ;
+    rdfs:label "Pump with single piece casing "@en ;
+    rdfs:subClassOf pump:PumpWithCasingFeature .
 
-pump:CasingSplitAxial a owl:Class ;
-    rdfs:subClassOf pump:PumpCasingFeature .
+pump:PumpWithCasingSplitAxial a owl:Class ;
+    rdfs:label "Pump with split axial casing "@en ;
+    rdfs:subClassOf pump:PumpWithCasingFeature .
 
-pump:CasingSplitRadial a owl:Class ;
-    rdfs:subClassOf pump:PumpCasingFeature .
+pump:PumpWithCasingSplitRadial a owl:Class ;
+    rdfs:label "Pump with split radial casing "@en ;
+    rdfs:subClassOf pump:PumpWithCasingFeature .
 
-pump:CasingVolute a owl:Class ;
-    rdfs:subClassOf pump:PumpCasingFeature .
+pump:PumpWithCasingVolute a owl:Class ;
+    rdfs:label "Pump with volute casing "@en ;
+    rdfs:subClassOf pump:PumpWithCasingFeature .
 
-pump:CasingWithBottomSuction a owl:Class ;
-    rdfs:subClassOf pump:PumpCasingFeature .
+pump:PumpWithCasingBottomSuction a owl:Class ;
+    rdfs:label "Pump with bottom suction casing "@en ;
+    rdfs:subClassOf pump:PumpWithCasingFeature .
 
-pump:CasingWithEndSuction a owl:Class ;
-    rdfs:subClassOf pump:PumpCasingFeature .
+pump:PumpWithCasingEndSuction a owl:Class ;
+    rdfs:label "Pump with end suction casing "@en ;
+    rdfs:subClassOf pump:PumpWithCasingFeature .
 
-pump:CasingWithSideDischarge a owl:Class ;
-    rdfs:subClassOf pump:PumpCasingFeature .
+pump:PumpWithCasingSideDischarge a owl:Class ;
+    rdfs:label "Pump with side discharge casing "@en ;
+    rdfs:subClassOf pump:PumpWithCasingFeature .
 
-pump:CasingWithSideSuction a owl:Class ;
-    rdfs:subClassOf pump:PumpCasingFeature .
+pump:PumpWithCasingSideSuction a owl:Class ;
+    rdfs:label "Pump with side suction casing "@en ;
+    rdfs:subClassOf pump:PumpWithCasingFeature .
 
-pump:CasingWithTopDischarge a owl:Class ;
-    rdfs:subClassOf pump:PumpCasingFeature .
+pump:PumpWithCasingWithTopDischarge a owl:Class ;
+    rdfs:label "Pump with top discharge casing "@en ;
+    rdfs:subClassOf pump:PumpWithCasingFeature .
 
-pump:CasingWithTopSuction a owl:Class ;
-    rdfs:subClassOf pump:PumpCasingFeature .  
+pump:PumpWithCasingWithTopSuction a owl:Class ;
+    rdfs:label "Pump with top suction casing "@en ;
+    rdfs:subClassOf pump:PumpWithCasingFeature .
 
-pump:PumpCasingFeature a owl:Class ;
+pump:PumpWithCasingFeature a owl:Class ;
+    rdfs:label "Pump with casing feature"@en ;
     rdfs:subClassOf pump:PumpFeature .        
 
 #################################################################
@@ -590,18 +603,23 @@ pump:PumpConcentricCasing a owl:Class ;
     rdfs:subClassOf pump:PumpCasing .
 
 pump:PumpConnectingRod a owl:Class ;
+    rdfs:label "Pump connecting rod"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpCrankshaft a owl:Class ;
+    rdfs:label "Pump crankshaft"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpCrosshead a owl:Class ;
+    rdfs:label "Pump crosshead"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpCylinder a owl:Class ;
+    rdfs:label "Pump cylinder"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpDiaphragm a owl:Class ;
+    rdfs:label "Pump diaphragm"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpDiffuser a owl:Class ;
@@ -626,6 +644,7 @@ pump:PumpFrame a owl:Class ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpFramePlate a owl:Class ;
+    rdfs:label "Pump frame plate"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpGland a owl:Class ;
@@ -633,14 +652,17 @@ pump:PumpGland a owl:Class ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpGrinderSystem a owl:Class ;
+    rdfs:label "Pump grinder system"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 
 
 pump:PumpLinerElastomer a owl:Class ;
+    rdfs:label "Pump liner elastomer"@en ;
     rdfs:subClassOf pump:PumpVoluteLiner .
 
 pump:PumpLinerMetal a owl:Class ;
+    rdfs:label "Pump liner metal"@en ;
     rdfs:subClassOf pump:PumpVoluteLiner .
 
 pump:PumpMultiVolute a owl:Class ;
@@ -649,6 +671,7 @@ pump:PumpMultiVolute a owl:Class ;
     skos:definition "type of volute for some specialized or large high-pressure pumps incorporate three, four, or more volutes around the impeller designed to further balance hydraulic forces and reduce pressure pulsations"@en .
 
 pump:PumpNonReturnValve a owl:Class ;
+    rdfs:label "Pump non-return valve"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpPacking a owl:Class ;
@@ -656,36 +679,47 @@ pump:PumpPacking a owl:Class ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpPiston a owl:Class ;
+    rdfs:label "Pump piston"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpPistonRod a owl:Class ;
+    rdfs:label "Pump piston rod"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpPropeller a owl:Class ;
+    rdfs:label "Pump propeller"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpPulsationDampner a owl:Class ;
+    rdfs:label "Pump pulsation damper"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpRotorGear a owl:Class ;
+    rdfs:label "Pump rotor gear"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpRotorLobe a owl:Class ;
+    rdfs:label "Pump rotor lobe"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpRotorScrew a owl:Class ;
+    rdfs:label "Pump rotor screw"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpShaftHorizontalOrientation a owl:Class ;
+    rdfs:label "Pump shaft horizontal orientation"@en ;
     rdfs:subClassOf pump:PumpShaft .
 
 pump:PumpShaftSealExpeller a owl:Class ;
+    rdfs:label "Pump shaft seal expeller"@en ;
     rdfs:subClassOf pump:PumpShaftSeal .
 
 pump:PumpShaftSealGland a owl:Class ;
+    rdfs:label "Pump shaft seal gland"@en ;
     rdfs:subClassOf pump:PumpShaftSeal .
 
 pump:PumpShaftSealMechanical a owl:Class ;
+    rdfs:label "Pump shaft seal mechanical"@en ;
     rdfs:subClassOf pump:PumpShaftSeal .
 
 pump:PumpShaftSealOilChamber a owl:Class ;
@@ -697,9 +731,11 @@ pump:PumpShaftSleeve a owl:Class ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpShaftVerticalOrientation a owl:Class ;
+    rdfs:label "Pump shaft vertical orientation"@en ;
     rdfs:subClassOf pump:PumpShaft .
 
 pump:PumpShaftVerticalSuspendedDesign a owl:Class ;
+    rdfs:label "Pump shaft vertical suspended design"@en ;
     rdfs:subClassOf pump:PumpShaft .
 
 pump:PumpSinglePieceCasing a owl:Class ;
@@ -716,6 +752,7 @@ pump:PumpSleeveShaft a owl:Class ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpSuctionBell a owl:Class ;
+    rdfs:label "Pump suction bell"@en ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpThroatbush a owl:Class ;
@@ -731,9 +768,11 @@ pump:PumpWearRing a owl:Class ;
     rdfs:subClassOf pump:PumpPart .
 
 pump:PumpImpellerMultiStage a owl:Class ;
+    rdfs:label "Pump impeller multi stage"@en ;
     rdfs:subClassOf pump:PumpImpeller .
 
 pump:PumpImpellerSingleStage a owl:Class ;
+    rdfs:label "Pump impeller single stage"@en ;
     rdfs:subClassOf pump:PumpImpeller . 
 
 pump:PumpBearing a owl:Class ;
