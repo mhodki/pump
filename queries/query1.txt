@@ -1,0 +1,15 @@
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:        <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX qudt:        <http://qudt.org/schema/qudt/>
+PREFIX quantitykind:<http://qudt.org/vocab/quantitykind/>
+
+SELECT DISTINCT ?volumeKind ?label
+WHERE {
+  ?volumeKind rdf:type qudt:QuantityKind ;
+                   rdfs:label ?label ;
+                   (qudt:specializationOf)* quantitykind:VolumePerTime .
+
+  FILTER(LANG(?label) = "" || LANGMATCHES(LANG(?label), "en"))
+  FILTER NOT EXISTS { ?volumeKind qudt:deprecated true }
+}
+ORDER BY LCASE(STR(?label))

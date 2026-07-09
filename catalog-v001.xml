@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://rds.posccaesar.org/ontology/plm/ont/core/0.9.1" uri="plm-core.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://rds.posccaesar.org/ontology/plm/ont/uom/0.9.1" uri="plm-uom.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://nlp-tlp.org/ontology/pump/ont/core/1.0" uri="pump_properties.ttl"/>
     <uri id="User Entered Import Resolution" name="https://nlp-tlp.org/ontology/process_fluid/ont/core" uri="pump.ttl"/>
     <uri id="User Entered Import Resolution" name="https://nlp-tlp.org/ontology/manufacturer/ont/" uri="manufacturer.ttl"/>
     <uri id="User Entered Import Resolution" name="https://nlp-tlp.org/ontology/process_fluid/rdl/" uri="process_fluid.ttl"/>

@@ -1,0 +1,34 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix qudt:  <http://qudt.org/schema/qudt/> .
+@prefix qk:    <http://qudt.org/vocab/quantitykind/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pump: <https://nlp-tlp.org/ontology/pump/rdl/> .
+
+<https://nlp-tlp.org/ontology/pump/imports/qudt_quantitykind_extract>
+    a owl:Ontology ;
+    dcterms:source <http://qudt.org/vocab/quantitykind/> ;
+    rdfs:comment "Local extract of selected QUDT quantity kinds used by this ontology."@en .
+
+
+pump:Pressure
+    a owl:Class ;
+    rdfs:subClassOf lis:PhysicalQuantity ;
+    skos:exactMatch qk:Pressure ;
+    rdfs:isDefinedBy <https://nlp-tlp.org/ontology/pump/imports/qudt_quantitykind_extract> ;
+    rdfs:label "Pressure"@en .
+
+pump:Temperature
+    a owl:Class ;
+    rdfs:subClassOf lis:PhysicalQuantity ;
+    skos:exactMatch qk:Temperature ;
+    rdfs:isDefinedBy <https://nlp-tlp.org/ontology/pump/imports/qudt_quantitykind_extract> ;
+    rdfs:label "Temperature"@en .
+
+pump:VolumeFlowRate
+    a owl:Class ;
+    rdfs:subClassOf lis:PhysicalQuantity ;
+    skos:exactMatch qk:VolumeFlowRate ;
+    rdfs:isDefinedBy <https://nlp-tlp.org/ontology/pump/imports/qudt_quantitykind_extract> ;
+    rdfs:label "Volume Flow Rate"@en .
